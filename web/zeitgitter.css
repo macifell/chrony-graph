@@ -13,10 +13,10 @@ body {
 h1,
 h2 {
   color: #008dd2;
-  margin-bottom: -0.5rem;
 }
 h2 {
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .box h2 {
   margin-top: 0;
@@ -45,7 +45,7 @@ code {
   color: #008dd2;
 }
 img {
-  max-width: 100%;
+  width: 50%;
 }
 
 /* Tables */
@@ -139,4 +139,10 @@ ul.header li a.active {
 }
 body ul.header li a:hover {
   background-color: #00334c;
+}
+
+@media (max-width: 30rem) {
+  img {
+    width: 100%;
+  }
 }

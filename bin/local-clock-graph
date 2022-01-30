@@ -11,7 +11,7 @@ set format x "%d-%H:%M"
 set xtic rotate by -45 scale 0
 set ytics format "%1.2f µs" nomirror
 set y2tics format "%2.3f ppm" nomirror
-set title "local clock"
+set title "Local Clock" font "Arial,24"
 set key bottom right box
 set lmargin 12
 set rmargin 12
@@ -36,7 +36,7 @@ set xlabel "Time"
 set format x "%d-%H:%M"
 set xtic rotate by -45 scale 0
 set ytics format "%1.2f µs" nomirror
-set title "local clock stddev"
+set title "Local Clock Standard Deviation" font "Arial,24"
 set key top right box
 set label 1 gprintf("99%% = $NINETYNINE µs",99) at graph 0.01,0.95 left front
 set label 2 gprintf("95%% = $NINETYFIVE µs",95) at graph 0.01,0.9 left front
@@ -70,7 +70,7 @@ set xlabel "Time"
 set format x "%d-%H:%M"
 set xtic rotate by -45 scale 0
 set ytics format "%1.3f ppm" nomirror
-set title "local clock skew"
+set title "Local Clock Skew" font "Arial,24"
 set key top right box
 set label 1 gprintf("99%% = $NINETYNINE ppm",99) at graph 0.01,0.95 left front
 set label 2 gprintf("95%% = $NINETYFIVE ppm",95) at graph 0.01,0.9 left front

@@ -24,7 +24,7 @@ set xlabel "Time"
 set format x "%d-%H:%M"
 set xtic rotate by -45 scale 0
 set ytics format "%1.3f ppm" nomirror
-set title "Local Clock range"
+set title "Local Clock Range" font "Arial,24"
 set key bottom right box
 set label 1 gprintf("99%% = $NINETYNINE ppm",99) at graph 0.01,0.3 left front
 set label 2 gprintf("95%% = $NINETYFIVE ppm",95) at graph 0.01,0.25 left front
@@ -58,7 +58,7 @@ set xlabel "Time"
 set format x "%d-%H:%M"
 set xtic rotate by -45 scale 0
 set ytics format "%1.2f µs" nomirror
-set title "Local Clock Offsets over time"
+set title "Local Clock Offsets" font "Arial,24"
 set key bottom right box
 set label 1 gprintf("99%% = %1.2f µs",$NINETYNINE) at graph 0.01,0.3 left front
 set label 2 gprintf("95%% = %1.2f µs",$NINETYFIVE) at graph 0.01,0.25 left front
@@ -87,7 +87,7 @@ set terminal svg size 900,600
 set output "offset-histogram.svg"
 set grid
 set xtic rotate by -45 scale 0
-set title "Local Clock Offsets - Histogram"
+set title "Local Clock Offsets — Histogram" font "Arial,24"
 set xtics format "%1.1f µs" nomirror
 set label 1 gprintf("99%% = %1.2f µs",$NINETYNINE) at $NINETYNINE, graph 0.91 left front offset 1,-1
 set style arrow 1 nohead 
@@ -120,7 +120,7 @@ EOF
 #set format x "%d-%H:%M"
 #set xtic rotate by -45 scale 0
 #set ytics format "%1.0f seconds/hr with lock" nomirror
-#set title "Seconds per hour spent in GPS lock"
+#set title "Seconds per hour spent in GPS lock" font "Arial,24"
 #set key bottom right box
 #plot \
 # "gps-lock" using 1:2 title "second" with lines
@@ -132,7 +132,7 @@ EOF
 #set output "gps-snr-histogram.svg"
 #set grid
 #set xtic rotate by -45 scale 0
-#set title "GPS SNR histogram"
+#set title "GPS SNR Histogram" font "Arial,24"
 #set xtics format "%1.1fdB snr" nomirror
 #set key off
 #plot \
@@ -150,7 +150,7 @@ EOF
 #set format x "%d-%H:%M"
 #set xtic rotate by -45 scale 0
 #set ytics format "%1.0f %% of time" nomirror
-#set title "Percent of time satellites spent at 0 snr"
+#set title "Percent of time satellites spent at 0 SNR" font "Arial,24"
 #set key bottom right box
 #plot \
 # "snr-history.hourly" using 1:(\$2 / (\$2 + \$3) * 100) title "signal" with lines

@@ -16,7 +16,7 @@ set format x "%d-%H:%M"
 set xtic rotate by -45 scale 0
 set ylabel ""
 set ytics format "$FORMAT" nomirror
-set title "$TITLE"
+set title "$TITLE" font "Arial,24"
 set key top right box
 $CUSTOM
 set lmargin 12
