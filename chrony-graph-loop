@@ -2,6 +2,7 @@
 INTERVAL=61
 exclude="--exclude index.html.tmpl --exclude notes --exclude run-cron"
 
+./substitute.sh web/*.IN
 rsync -au $exclude web/. /web
 while true; do
   (cd week && FREQ=Weekly ../bin/run 7)
