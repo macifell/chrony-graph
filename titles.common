@@ -40,6 +40,8 @@ statistics.2001:12ff:0:7::186 a.st1.ntp.br/IPv6
 statistics.201.49.148.135 b.st1.ntp.br/IPv4
 statistics.200.186.125.195 c.st1.ntp.br/IPv4
 statistics.200.20.186.76 d.st1.ntp.br/IPv4
+statistics.200.160.7.197 gps.ntp.br/IPv4
+statistics.2001:12ff:0:7::197 gps.ntp.br/IPv6
 
 # Global
 statistics.162.159.200.1 time.cloudflare.com/IPv4.1
