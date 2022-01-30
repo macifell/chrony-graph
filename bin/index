@@ -16,10 +16,15 @@ $NOTES =~ s/&/&amp;/g;
 
 my $time = scalar(gmtime());
 
+my $THISHOST = $ENV{THISHOST};
+my $FREQ = $ENV{FREQ};
+
 open(TMPL,"<","index.html.tmpl");
 while(<TMPL>) {
   s/__RUN__/$RUN/g;
   s/__NOTES__/$NOTES/g;
   s/__TIME__/$time/g;
+  s/__THISHOST__/$THISHOST/g;
+  s/__FREQ__/$FREQ/g;
   print;
 }

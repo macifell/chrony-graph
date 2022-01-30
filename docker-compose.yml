@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  ntpviz:
+    restart: unless-stopped
+    build: .
+    # environment defined on override file
+    volumes:
+      - /var/log/chrony:/var/log/chrony:ro
+      # A line like the following belongs to the override file
+      #- /data/docker/https-server/vhosts/ntp.zeitgitter.net:/web

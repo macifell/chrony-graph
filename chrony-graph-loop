@@ -1,0 +1,14 @@
+#!/bin/sh
+INTERVAL=61
+exclude="--exclude index.html.tmpl --exclude notes --exclude run-cron"
+
+rsync -au $exclude web/. /web
+while true; do
+  (cd week && FREQ=Weekly ../bin/run)
+  rsync -au $exclude week /web
+  for i in 1 2 3 4 5 6; do
+    (cd day && FREQ=Daily ../bin/run)
+    rsync -au $exclude day /web
+    sleep $INTERVAL
+  done
+done
