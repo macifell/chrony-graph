@@ -1,29 +1,49 @@
 <!DOCTYPE html>
-<html>
-<head><title>NTP Run __RUN__</title>
-<meta http-equiv="refresh" content="1800" />
-<meta charset="utf-8" />
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>NTP/NTS __FREQ__ Statistics at __THISHOST__</title>
+    <link rel="stylesheet" type="text/css" href="../zeitgitter.css" />
+    <link rel="shortcut icon" href="../ntp-zeitgitter.svg" />
+  </head>
+  <body>
+    <ul class="header">
+      <li>
+        <a href="../"><img src="../zg-white.svg" style="width:auto;" /> Home</a>
+      </li>
+      <li><a href="./">Daily Stats</a></li>
+      <li><a href="../week/" class="active">Weekly Stats</a></li>
+    </ul>
+    <img src="../ntp-zeitgitter.svg" style="width:20%;float:right;margin:2em;" />
+<h1>__THISHOST__ __FREQ__</h1>
 <p>
-Last update - __TIME__ GMT
+<b>Report generated:</b> __TIME__ UTC</br>
+<b>Report period:</b> 7 days
 </p>
-<img src="local-clock.svg" alt="Local Clock: Frequency + Offset"><br>
-<img src="percentiles.svg" alt="Local Clock: Frequency detail"><br>
-<img src="percentiles-offset.svg" alt="Local Clock: Offset detail"><br>
-<img src="offset-histogram.svg" alt="Local Clock: Offset histogram"><br>
-<img src="local-clock-skew.svg" alt="Local Clock: Skew"><br>
-<img src="local-clock-stddev.svg" alt="Local Clock: stddev"><br>
-<img src="all-diff-freq.svg" alt="Remote Clocks: Frequency Difference"><br>
-<img src="all-offset.svg" alt="Remote Clocks: Offsets"><br>
-<img src="all-skew.svg" alt="Remote Clocks: Skew"><br>
-<img src="remote-statistics.SET_IP_HERE.svg" alt="Remote Clock: SERVER_NAME"><br>
-<pre>
-__RUN__ notes:
-__NOTES__
-</pre>
+<h2>Index</h2>
+<ul>
+<li><a href="#local">Local Clock</a></li>
+<li><a href="#remote">Remote Clocks Summary</a></li>
+<li><a href="#detail">Remote Clocks Details</a></li>
+</ul>
+
+<h2><a name="local"></a>Local Clock</h2>
+<a href="local-clock.svg"><img src="local-clock.svg" alt="Local Clock: Frequency + Offset" /></a
+><a href="percentiles.svg"><img src="percentiles.svg" alt="Local Clock: Frequency detail" /></a
+><a href="percentiles-offset.svg"><img src="percentiles-offset.svg" alt="Local Clock: Offset detail" /></a
+><a href="offset-histogram.svg"><img src="offset-histogram.svg" alt="Local Clock: Offset histogram" /></a
+><a href="local-clock-skew.svg"><img src="local-clock-skew.svg" alt="Local Clock: Skew" /></a
+><a href="local-clock-stddev.svg"><img src="local-clock-stddev.svg" alt="Local Clock: stddev" /></a>
+
+<h2><a name="remote"></a>Remote Clocks Summary</h2>
+<a href="all-diff-freq.svg"><img src="all-diff-freq.svg" alt="Remote Clocks: Frequency Difference" /></a
+><a href="all-offset.svg"><img src="all-offset.svg" alt="Remote Clocks: Offsets" /></a
+><a href="all-skew.svg"><img src="all-skew.svg" alt="Remote Clocks: Skew" /></a>
+
+<h2><a name="detail"></a>Remote Clocks Details</h2>
+__ALL_REMOTES_WITH_LINK__
 <p>
-Git repository for chrony-graph:
- <a href="https://github.com/ddrown/chrony-graph">https://github.com/ddrown/chrony-graph</a>
+<a href="https://github.com/MarcelWaldvogel/chrony-graph">Git repository for this version of chrony-graph</a>
 </p>
-</body></html>
+</body>
+</html>
