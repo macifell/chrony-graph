@@ -9,7 +9,7 @@
   <body>
     <ul class="header">
       <li>
-        <a href="./" class="active"><img src="zg-white.svg" /> Home</a>
+        <a href="./" class="active"><img src="zg-white.svg" style="width:auto;" /> Home</a>
       </li>
       <li><a href="./day/">Daily Stats</a></li>
       <li><a href="./week/">Weekly Stats</a></li>
