@@ -1,7 +1,7 @@
 FROM debian:bullseye
 
 RUN apt update && \
-    apt install -y perl gnuplot-nox rsync && \
+    apt install -y bc perl libdatetime-perl gnuplot-nox rsync && \
     apt clean && \
     rm -rf /var/lib/apt/lists
 
