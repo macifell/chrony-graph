@@ -127,8 +127,8 @@ server ntp.trifence.ch    iburst nts</pre
       <a href="./day/">statistics over the last 24 hours</a> and
       <a href="./week/">over the past week</a>, updated multiple times a day.
       They are generated with
-      <a href="https://docs.ntpsec.org/latest/ntpviz.html"
-        ><code>ntpviz</code></a
+      <a href="https://github.com/MarcelWaldvogel/chrony-graph/"
+        ><code>chrony-graph</code></a
       >.
     </p>
     <p>A second opinion about our timekeeping is collected by the NTP Pool:</p>
