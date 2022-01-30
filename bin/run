@@ -1,14 +1,19 @@
 #!/bin/sh
+if [ -n "$1" ]; then
+  DAYS="$1"
+else
+  DAYS=7
+fi
 
 if [ -x startime ]; then
   STARTIME=`./startime`
 else
   NOW=`date +%s`
-  # 604800 seconds = 7 days
-  STARTIME=`expr $NOW - 604800`
+  # 86400 seconds = 1 day
+  STARTIME=`expr $NOW - $DAYS \* 86400`
 fi
 
-LOGDAYS=7
+LOGDAYS=$DAYS
 if [ -n "$CHRONY_LOGDIR" ]; then
   LOGDIR=$CHRONY_LOGDIR
 else
