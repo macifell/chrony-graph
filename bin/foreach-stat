@@ -20,5 +20,5 @@ done | grep -v NMEA | sort -n | while read date file; do
   else
     i=1
   fi
-  echo $TEMPLATE | sed -e "s/__FILE__/$file/g" -e "s/__TITLE__/$title/g"
+  echo $TEMPLATE | sed -e "s/__FILE__/$file/g" -e "s=__TITLE__=$title=g"
 done
