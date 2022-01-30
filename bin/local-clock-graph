@@ -9,7 +9,7 @@ set grid
 set xlabel "Time"
 set format x "%d-%H:%M"
 set xtic rotate by -45 scale 0
-set ytics format "%1.2f us" nomirror
+set ytics format "%1.2f µs" nomirror
 set y2tics format "%2.3f ppm" nomirror
 set title "local clock"
 set key bottom right box
@@ -35,15 +35,15 @@ set grid
 set xlabel "Time"
 set format x "%d-%H:%M"
 set xtic rotate by -45 scale 0
-set ytics format "%1.2f us" nomirror
+set ytics format "%1.2f µs" nomirror
 set title "local clock stddev"
 set key top right box
-set label 1 gprintf("99%% = $NINETYNINE us",99) at graph 0.01,0.95 left front
-set label 2 gprintf("95%% = $NINETYFIVE us",95) at graph 0.01,0.9 left front
-set label 3 gprintf(" 5%% = $FIVE us",5) at graph 0.01,0.85 left front
-set label 4 gprintf(" 1%% = $ONE us",1) at graph 0.01,0.8 left front
-set label 5 gprintf("95%% - 5%% = $NF_M_F us",90) at graph 0.01,0.75 left front
-set label 6 gprintf("99%% - 1%% = $NN_M_O us",98) at graph 0.01,0.7 left front
+set label 1 gprintf("99%% = $NINETYNINE µs",99) at graph 0.01,0.95 left front
+set label 2 gprintf("95%% = $NINETYFIVE µs",95) at graph 0.01,0.9 left front
+set label 3 gprintf(" 5%% = $FIVE µs",5) at graph 0.01,0.85 left front
+set label 4 gprintf(" 1%% = $ONE µs",1) at graph 0.01,0.8 left front
+set label 5 gprintf("95%% - 5%% = $NF_M_F µs",90) at graph 0.01,0.75 left front
+set label 6 gprintf("99%% - 1%% = $NN_M_O µs",98) at graph 0.01,0.7 left front
 set lmargin 12
 set rmargin 12
 plot \
