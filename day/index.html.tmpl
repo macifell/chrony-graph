@@ -14,21 +14,33 @@
       <li><a href="./" class="active">Daily Stats</a></li>
       <li><a href="../week/">Weekly Stats</a></li>
     </ul>
-    <img src="../ntp-zeitgitter.svg" style="width:20%;float:left;margin:2em;" />
+    <img src="../ntp-zeitgitter.svg" style="width:20%;float:right;margin:2em;" />
 <h1>__THISHOST__ __FREQ__</h1>
 <p>
 <b>Report generated:</b> __TIME__ UTC</br>
 <b>Report period:</b> 1 day
 </p>
+<h2>Index</h2>
+<ul>
+<li><a href="#local">Local Clock</a></li>
+<li><a href="#remote">Remote Clocks Summary</a></li>
+<li><a href="#detail">Remote Clocks Details</a></li>
+</ul>
+
+<h2><a name="local"></a>Local Clock</h2>
 <img src="local-clock.svg" alt="Local Clock: Frequency + Offset"><br>
 <img src="percentiles.svg" alt="Local Clock: Frequency detail"><br>
 <img src="percentiles-offset.svg" alt="Local Clock: Offset detail"><br>
 <img src="offset-histogram.svg" alt="Local Clock: Offset histogram"><br>
 <img src="local-clock-skew.svg" alt="Local Clock: Skew"><br>
 <img src="local-clock-stddev.svg" alt="Local Clock: stddev"><br>
+
+<h2><a name="remote"></a>Remote Clocks Summary</h2>
 <img src="all-diff-freq.svg" alt="Remote Clocks: Frequency Difference"><br>
 <img src="all-offset.svg" alt="Remote Clocks: Offsets"><br>
 <img src="all-skew.svg" alt="Remote Clocks: Skew"><br>
+
+<h2><a name="detail"></a>Remote Clocks Details</h2>
 <img src="remote-statistics.SET_IP_HERE.svg" alt="Remote Clock: SERVER_NAME"><br>
 <p>
 <a href="https://github.com/MarcelWaldvogel/chrony-graph">Git repository for this version of chrony-graph</a>
