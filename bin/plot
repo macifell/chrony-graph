@@ -160,4 +160,6 @@ if [ -x custom-plot ]; then
   ./custom-plot
 fi
 
-../bin/copy-to-website
+if [ -x ../bin/copy-to-website ]; then
+  ../bin/copy-to-website
+fi
