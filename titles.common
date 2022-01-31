@@ -20,6 +20,11 @@ statistics.89.217.129.163 time.signorini.ch/IPv4
 
 statistics.192.33.96.102 time2.ethz.ch/IPv4
 
+statistics.82.197.188.130 ntp1.init7.net/IPv4
+statistics.2001:1620:2777:b::128 ntp1.init7.net/IPv6
+statistics.82.197.164.46 ntp1.init7.net/IPv4
+statistics.2001:1620:2777:d::2 ntp1.init7.net/IPv6
+
 # DE
 statistics.192.53.103.108 ptbtime1.ptb.de/IPv4
 statistics.2001:638:610:be01::108 ptbtime1.ptb.de/IPv6
