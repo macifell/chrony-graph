@@ -9,4 +9,4 @@ RUN mkdir /app /web
 COPY . /app/
 
 WORKDIR /app
-CMD /app/chrony-graph-loop
+CMD [ "/app/chrony-graph-loop" ]
