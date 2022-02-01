@@ -51,6 +51,8 @@ statistics.2a00:d78:0:712:94:198:159:11 nts.time.nl/IPv6
 # SE NTS
 statistics.194.58.202.201 nts.ntp.se/IPv4
 statistics.2a01:3f7:2:202::201 nts.ntp.se/IPv6
+statistics.194.58.202.202 ntsts.sth.ntp.se/IPv4
+statistics.2a01:3f7:2:202::202 ntsts.sth.ntp.se/IPv6
 
 ###
 ### Americas
