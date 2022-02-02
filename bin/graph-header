@@ -12,7 +12,7 @@ if [ -n "$FORCE_LINEAR" ]; then
   YSCALE=""
 else
   YTICS="("`../bin/linlogytics $LINSCALELIMIT`")"
-  YSCALE=<< EOF
+  read -r -d '' YSCALE <<EOF
 flogy(y) = ((log(abs(y))-log($LINSCALELIMIT))/log(10)+2)*$LINSCALELIMIT*0.5
 glogy(y) = exp((log(10)*(abs(y)/($LINSCALELIMIT)-1)/0.5)+log($LINSCALELIMIT))
 f(y) = (abs(y) < $LINSCALELIMIT) ? y : sgn(y)*flogy(y)
