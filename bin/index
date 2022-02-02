@@ -35,7 +35,7 @@ my $time = scalar(gmtime());
 my $THISHOST = $ENV{THISHOST};
 my $FREQ = $ENV{FREQ};
 
-my @remotes = glob("remote-statistics.[^N]*.svg");
+my @remotes = glob("remote-statistics.[0-9G]*.svg");
 my $ALL_REMOTES = "";
 my $ALL_REMOTES_WITH_LINK = "";
 foreach my $r (@remotes) {
