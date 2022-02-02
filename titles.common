@@ -23,8 +23,8 @@ statistics.192.33.96.102 time2.ethz.ch/IPv4
 
 statistics.82.197.188.130 ntp1.init7.net/IPv4
 statistics.2001:1620:2777:b::128 ntp1.init7.net/IPv6
-statistics.82.197.164.46 ntp1.init7.net/IPv4
-statistics.2001:1620:2777:d::2 ntp1.init7.net/IPv6
+statistics.82.197.164.46 ntp2.init7.net/IPv4
+statistics.2001:1620:2777:d::2 ntp2.init7.net/IPv6
 
 statistics.195.176.26.204 ntp11.metas.ch/IPv4
 statistics.195.176.26.205 ntp12.metas.ch/IPv4
