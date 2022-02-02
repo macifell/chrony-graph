@@ -41,7 +41,7 @@ my $ALL_REMOTES_WITH_LINK = "";
 foreach my $r (@remotes) {
   my $remote = $r;
   my $link = $r;
-  if ($ENV[GNUPLOT_TERMINALS] == "png svg") {
+  if ($ENV["GNUPLOT_TERMINALS"] == "png svg") {
     $link =~ s/png$/svg/;
   }
   $remote =~ s/^remote-statistics\.//;

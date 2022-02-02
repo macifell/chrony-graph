@@ -1,6 +1,7 @@
 #!/bin/bash
-if [ "x$1" = "x--plus-svg" ];
+if [ "x$1" = "x--plus-svg" ]; then
   export GNUPLOT_TERMINALS="png svg"
+  shift
 else
   export GNUPLOT_TERMINALS="${GNUPLOT_TERMINALS:-png}"
 fi
