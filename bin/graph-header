@@ -7,7 +7,7 @@ FORMAT=$4
 TITLE=$5
 CUSTOM=$6
 
-if [ $LINSCALELIMIT = 0 ]; then
+if [ -n "$FORCE_LINEAR" ]; then
   YTICS=""
   YSCALE=""
 else
