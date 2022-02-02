@@ -30,6 +30,12 @@ statistics.195.176.26.204 ntp11.metas.ch/IPv4
 statistics.195.176.26.205 ntp12.metas.ch/IPv4
 statistics.195.176.26.206 ntp13.metas.ch/IPv4
 
+statistics.84.16.73.33 tick.ntp.infomaniak.ch/IPv4
+statistics.2001:1600:4:1::123 tick.ntp.infomaniak.ch/IPv6
+statistics.84.16.73.33 tock.ntp.infomaniak.ch/IPv4
+statistics.2001:1600:3:6::123 tock.ntp.infomaniak.ch/IPv6
+statistics.185.125.24.59 falseticker.ntp.infomaniak.ch/IPv4
+
 # DE NTS
 statistics.192.53.103.108 ptbtime1.ptb.de/IPv4
 statistics.2001:638:610:be01::108 ptbtime1.ptb.de/IPv6
