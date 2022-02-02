@@ -79,11 +79,4 @@ if [ -f log/snr-history2 ]; then
 fi
 
 ../bin/plot
-
-echo $0 before index
-ls *.png *.svg
-
 ../bin/index >index.html
-
-echo $0 after index
-ls *.png *.svg

@@ -7,6 +7,3 @@ TERMINAL=$1
 ../bin/foreach-stat "'__FILE__' using 1:(\$6*1000000) title '__TITLE__' with line \\"
 echo 
 ) | gnuplot
-
-echo $0
-ls *.png *.svg

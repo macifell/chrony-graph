@@ -89,6 +89,3 @@ plot \
  $FIVE title "5th percentile", \
  $ONE title "1st percentile"
 EOF
-
-echo $0
-ls *.png *.svg
