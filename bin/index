@@ -50,8 +50,8 @@ foreach my $r (@remotes) {
   $key =~ s/_/:/g;
   my $desc = $titles{"statistics.$key"} || $key;
   my $img = "<img src=\"$r\" alt=\"Remote clock: $desc\" />";
-  $ALL_REMOTES .= "$img<br />\n";
-  $ALL_REMOTES_WITH_LINK .= "<a href=\"$link\">$img</a><br />\n";
+  $ALL_REMOTES .= $img;
+  $ALL_REMOTES_WITH_LINK .= "<a href=\"$link\">$img</a>";
 }
 
 open(TMPL,"<","index.html.tmpl");
