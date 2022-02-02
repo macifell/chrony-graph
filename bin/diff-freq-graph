@@ -1,7 +1,8 @@
 #!/bin/bash
 
+TERMINAL=$1
 (
-../bin/graph-header all-diff-freq.svg "%1.1f µs/s" "All Clocks (Frequency Differences)" "set yrange [-3:3]"
+../bin/graph-header all-diff-freq $TERMINAL "%1.1f µs/s" "All Clocks (Frequency Differences)" "set yrange [-3:3]"
 ../bin/foreach-stat "'__FILE__' using 1:(\$6*1000000) title '__TITLE__' with line \\"
 echo 
 ) | gnuplot

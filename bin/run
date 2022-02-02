@@ -1,6 +1,14 @@
 #!/bin/bash
+if [ "x$1" = "x--plus-svg" ]; then
+  export GNUPLOT_TERMINALS="png svg"
+  shift
+else
+  export GNUPLOT_TERMINALS="${GNUPLOT_TERMINALS:-png}"
+fi
+
 if [ -n "$1" ]; then
   DAYS="$1"
+  shift
 else
   DAYS=7
 fi
