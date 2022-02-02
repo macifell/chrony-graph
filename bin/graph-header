@@ -7,7 +7,19 @@ FORMAT=$4
 TITLE=$5
 CUSTOM=$6
 
-YTICS=`../bin/linlogytics $LINSCALELIMIT`
+if [ $LINSCALELIMIT = 0 ]; then
+  YTICS=""
+  YSCALE=""
+else
+  YTICS="("`../bin/linlogytics $LINSCALELIMIT`")"
+  YSCALE=<< EOF
+flogy(y) = ((log(abs(y))-log($LINSCALELIMIT))/log(10)+2)*$LINSCALELIMIT*0.5
+glogy(y) = exp((log(10)*(abs(y)/($LINSCALELIMIT)-1)/0.5)+log($LINSCALELIMIT))
+f(y) = (abs(y) < $LINSCALELIMIT) ? y : sgn(y)*flogy(y)
+g(y) = (abs(y) < $LINSCALELIMIT) ? y : sgn(y)*glogy(y)
+set nonlinear y via f(y) inverse g(y)
+EOF
+fi
 
 #echo $LINSCALELIMIT 1>&2
 #echo $YTICS 1>&2
@@ -22,14 +34,10 @@ set xlabel "Time"
 set format x "%d-%H:%M"
 set xtic rotate by -45 scale 0
 set ylabel ""
-set ytics format "$FORMAT" nomirror ($YTICS)
+set ytics format "$FORMAT" nomirror $YTICS
 set title "$TITLE" font "Arial,24"
 set key top right box
-flogy(y) = ((log(abs(y))-log($LINSCALELIMIT))/log(10)+2)*$LINSCALELIMIT*0.5
-glogy(y) = exp((log(10)*(abs(y)/($LINSCALELIMIT)-1)/0.5)+log($LINSCALELIMIT))
-f(y) = (abs(y) < $LINSCALELIMIT) ? y : sgn(y)*flogy(y)
-g(y) = (abs(y) < $LINSCALELIMIT) ? y : sgn(y)*glogy(y)
-set nonlinear y via f(y) inverse g(y)
+$YSCALE
 $CUSTOM
 set lmargin 12
 set rmargin 12
