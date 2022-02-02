@@ -35,11 +35,15 @@ my $time = scalar(gmtime());
 my $THISHOST = $ENV{THISHOST};
 my $FREQ = $ENV{FREQ};
 
-my @remotes = glob("remote-statistics.[0-9G]*.svg");
+my @remotes = glob("remote-statistics.[0-9G]*.png");
 my $ALL_REMOTES = "";
 my $ALL_REMOTES_WITH_LINK = "";
 foreach my $r (@remotes) {
   my $remote = $r;
+  my $link = $r;
+  if ($ENV[GNUPLOT_TERMINALS] == "png svg") {
+    $link =~ s/png$/svg/;
+  }
   $remote =~ s/^remote-statistics\.//;
   $remote =~ s/\.svg$//;
   my $key = $remote;
@@ -47,7 +51,7 @@ foreach my $r (@remotes) {
   my $desc = $titles{"statistics.$key"} || $key;
   my $img = "<img src=\"$r\" alt=\"Remote clock: $desc\" />";
   $ALL_REMOTES .= $img;
-  $ALL_REMOTES_WITH_LINK .= "<a href=\"$r\">$img</a>";
+  $ALL_REMOTES_WITH_LINK .= "<a href=\"$link\">$img</a>";
 }
 
 open(TMPL,"<","index.html.tmpl");
