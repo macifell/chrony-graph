@@ -69,3 +69,6 @@ echo "$titles" | while read file title; do
     ) | gnuplot
   fi
 done
+
+echo $0
+ls *.png *.svg
