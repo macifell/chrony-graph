@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>NTP/NTS Server at THISHOST</title>
+    <title>__THISHOST__ __ACCESS__ NTP/NTS Server</title>
     <link rel="stylesheet" type="text/css" href="zeitgitter.css" />
     <link rel="shortcut icon" href="ntp-zeitgitter.svg" />
   </head>
@@ -14,7 +14,7 @@
       <li><a href="./day/">Daily Stats</a></li>
       <li><a href="./week/">Weekly Stats</a></li>
     </ul>
-    <h1 class="top">Public NTP/NTS Server at THISHOST</h1>
+    <h1 class="top">__ACCESS__ NTP/NTS Server at __THISHOST__</h1>
     <p>
       Timestamping, whether with Zeitgitter or any other mechanism, requires
       accurate and reliable time sources. Our NTP/NTS servers help provide this
