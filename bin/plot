@@ -3,6 +3,8 @@
 export GDFONTPATH=/usr/share/fonts/liberation
 export GNUPLOT_DEFAULT_GDFONT=LiberationSans-Regular
 
+rm remote-statistics.*.{png,svg} 2>/dev/null
+
 for TERMINAL in $GNUPLOT_TERMINALS
 do
   ../bin/local-clock-graph $TERMINAL
