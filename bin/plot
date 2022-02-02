@@ -66,15 +66,15 @@ EOF
   g(y) = (abs(y) < $LINSCALELIMIT) ? y : sgn(y)*glogy(y)
   set nonlinear y via f(y) inverse g(y)
   set xtic rotate by -45 scale 0
-  set ytics format "%1.2f µs" nomirror ($YTICS)
+  set ytics format "%'1.2f µs" nomirror ($YTICS)
   set title "Local Clock Offsets over time"
   set key bottom right box
-  set label 1 gprintf("99%% = %1.2f µs",$NINETYNINE) at graph 0.01,0.3 left front
-  set label 2 gprintf("95%% = %1.2f µs",$NINETYFIVE) at graph 0.01,0.25 left front
-  set label 3 gprintf(" 5%% = %1.2f µs",$FIVE) at graph 0.01,0.2 left front
-  set label 4 gprintf(" 1%% = %1.2f µs",$ONE) at graph 0.01,0.15 left front
-  set label 5 gprintf("95%% - 5%% = %1.2f µs", $NF_M_F) at graph 0.01,0.1 left front
-  set label 6 gprintf("99%% - 1%% = %1.2f µs", $NN_M_O) at graph 0.01,0.05 left front
+  set label 1 gprintf("99%% = %'1.2f µs",$NINETYNINE) at graph 0.01,0.3 left front
+  set label 2 gprintf("95%% = %'1.2f µs",$NINETYFIVE) at graph 0.01,0.25 left front
+  set label 3 gprintf(" 5%% = %'1.2f µs",$FIVE) at graph 0.01,0.2 left front
+  set label 4 gprintf(" 1%% = %'1.2f µs",$ONE) at graph 0.01,0.15 left front
+  set label 5 gprintf("95%% - 5%% = %'1.2f µs", $NF_M_F) at graph 0.01,0.1 left front
+  set label 6 gprintf("99%% - 1%% = %'1.2f µs", $NN_M_O) at graph 0.01,0.05 left front
   set lmargin 12
   set rmargin 12
   plot \
@@ -97,17 +97,17 @@ EOF
   set grid
   set xtic rotate by -45 scale 0
   set title "Local Clock Offsets — Histogram" font "Arial,24"
-  set xtics format "%1.1f µs" nomirror
-  set label 1 gprintf("99%% = %1.2f µs",$NINETYNINE) at $NINETYNINE, graph 0.91 left front offset 1,-1
+  set xtics format "%'1.1f µs" nomirror
+  set label 1 gprintf("99%% = %'1.2f µs",$NINETYNINE) at $NINETYNINE, graph 0.91 left front offset 1,-1
   set style arrow 1 nohead 
   set arrow from $NINETYNINE,0 to $NINETYNINE,graph 0.91 as 1
-  set label 2 gprintf(" 1%% = %1.2f µs",$ONE) at $ONE, graph 0.91 right front offset -1,-1
+  set label 2 gprintf(" 1%% = %'1.2f µs",$ONE) at $ONE, graph 0.91 right front offset -1,-1
   set style arrow 2 nohead
   set arrow from $ONE,0 to $ONE,graph 0.91 as 2
-  set label 3 gprintf("25%% = %1.2f µs",$TWENTYFIVE) at $TWENTYFIVE, graph 0.7 right front offset -1,-1
+  set label 3 gprintf("25%% = %'1.2f µs",$TWENTYFIVE) at $TWENTYFIVE, graph 0.7 right front offset -1,-1
   set style arrow 3 nohead
   set arrow from $TWENTYFIVE,0 to $TWENTYFIVE,graph 0.7 as 3
-  set label 4 gprintf("75%% = %1.2f µs",$SEVENTYFIVE) at $SEVENTYFIVE, graph 0.7 left front offset 1,-1
+  set label 4 gprintf("75%% = %'1.2f µs",$SEVENTYFIVE) at $SEVENTYFIVE, graph 0.7 left front offset 1,-1
   set style arrow 4 nohead
   set arrow from $SEVENTYFIVE,0 to $SEVENTYFIVE,graph 0.7 as 4
   set xrange [-500:500]

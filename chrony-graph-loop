@@ -5,10 +5,10 @@ exclude="--exclude index.html.tmpl --exclude notes --exclude run-cron"
 ./substitute.sh web/*.IN
 rsync -au $exclude web/. /web
 while true; do
-  (cd week && FREQ=Weekly ../bin/run --plus-svg 7)
+  (cd week && LC_NUMERIC=en_US.UTF-8 FREQ=Weekly ../bin/run --plus-svg 7)
   rsync -au $exclude week /web
   for i in 1 2 3 4 5 6; do
-    (cd day && FREQ=Daily ../bin/run --plus-svg 1)
+    (cd day && LC_NUMERIC=en_US.UTF-8 FREQ=Daily ../bin/run --plus-svg 1)
     rsync -au $exclude day /web
     sleep $INTERVAL
   done
