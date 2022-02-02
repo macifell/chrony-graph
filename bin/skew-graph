@@ -1,9 +1,15 @@
 #!/bin/bash
-
 TERMINAL=$1
 
+LINSCALELIMIT=1
+for stat in statistics.*; do
+    LINSCALELIMIT=`../bin/linscalelimit $LINSCALELIMIT 5 $stat`
+    echo $stat $LINSCALELIMIT
+done
+LINSCALELIMIT=`echo $LINSCALELIMIT | ../bin/mul 1000000`
+
 (
-../bin/graph-header all-skew $TERMINAL "%1.0f µs/s" "All Clocks (Skew)" "set yrange [-10:10]"
+../bin/graph-header all-skew $TERMINAL $LINSCALELIMIT "%1.1f µs/s" "all clocks (skew)" "set yrange [-10:10]"
 ../bin/foreach-stat "'__FILE__' using 1:(\$6*1000000) title '__TITLE__' with line \\"
 echo 
 ) | gnuplot

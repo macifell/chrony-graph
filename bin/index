@@ -45,13 +45,13 @@ foreach my $r (@remotes) {
     $link =~ s/png$/svg/;
   }
   $remote =~ s/^remote-statistics\.//;
-  $remote =~ s/\.svg$//;
+  $remote =~ s/\.(svg|png)$//;
   my $key = $remote;
   $key =~ s/_/:/g;
   my $desc = $titles{"statistics.$key"} || $key;
   my $img = "<img src=\"$r\" alt=\"Remote clock: $desc\" />";
-  $ALL_REMOTES .= $img;
-  $ALL_REMOTES_WITH_LINK .= "<a href=\"$link\">$img</a>";
+  $ALL_REMOTES .= "$img<br />\n";
+  $ALL_REMOTES_WITH_LINK .= "<a href=\"$link\">$img</a><br />\n";
 }
 
 open(TMPL,"<","index.html.tmpl");
