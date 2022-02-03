@@ -50,7 +50,7 @@ EOF
   ONE=`../bin/percentile 5 1 tracking.log | ../bin/mul 1000000`
   NF_M_F=`echo $NINETYFIVE - $FIVE | bc`
   NN_M_O=`echo $NINETYNINE - $ONE | bc`
-  LINSCALELIMIT=`../bin/linscalelimit 1 5 tracking.log | ../bin/mul 1000000`
+  LINSCALELIMIT=`../bin/linscalelimit 1 5 80 tracking.log | ../bin/mul 1000000`
   YTICS=`../bin/linlogytics $LINSCALELIMIT`
   gnuplot <<EOF
   set terminal $TERMINAL size 900,600

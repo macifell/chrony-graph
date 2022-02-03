@@ -4,6 +4,7 @@ use strict;
 
 my $prevlimit = shift;
 my $column = shift;
+my $percentile = shift;
 
 my(@data);
 while(<>) {
@@ -11,7 +12,6 @@ while(<>) {
   push(@data, abs($columns[$column]));
 }
 
-my $percentile = 50;
 
 @data = sort {$a <=> $b} @data;
 my $offset = int(scalar(@data) * ($percentile/100));

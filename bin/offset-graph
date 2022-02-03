@@ -3,13 +3,13 @@ TERMINAL=$1
 
 LINSCALELIMIT=1
 for stat in statistics.*; do
-    LINSCALELIMIT=`../bin/linscalelimit $LINSCALELIMIT 3 $stat`
+    LINSCALELIMIT=`../bin/linscalelimit $LINSCALELIMIT 3 99 $stat`
     echo $stat $LINSCALELIMIT
 done
 LINSCALELIMIT=`echo $LINSCALELIMIT | ../bin/mul 1000000`
 
 (
-FORCE_LINEAR=${FORCE_LINEAR_ALLSTAR} ../bin/graph-header all-offset $TERMINAL $LINSCALELIMIT "%1.0f µs" "All Clocks (Offset)" ""
+../bin/graph-header all-offset $TERMINAL $LINSCALELIMIT "%1.0f µs" "All Clocks (Offset)" ""
 ../bin/foreach-stat "'__FILE__' using 1:(\$4*1000000) title '__TITLE__' with line \\"
 echo 
 ) | gnuplot
@@ -60,7 +60,7 @@ echo "$titles" | while read file title; do
       if [ -f $measurements_file ]; then
         FIFTY=`../bin/percentile 10 50 $measurements_file | ../bin/mul 1000000`
         CUSTOM="set label 1 gprintf('50%% = $FIFTY µs',50) at graph 0.01,0.05 left front"
-        LINSCALELIMIT=`../bin/linscalelimit 1 10 $measurements_file | ../bin/mul 1000000`
+        LINSCALELIMIT=`../bin/linscalelimit 1 10 80 $measurements_file | ../bin/mul 1000000`
         ../bin/graph-header remote-${imagename} $TERMINAL $LINSCALELIMIT "%1.0f µs" "$title Offset" "$CUSTOM"
         echo "'$measurements_file' using 1:(\$11*1000000) title 'offset' with line, \\"
         echo "'$measurements_file' using 1:((\$11+\$12/2)*1000000) title 'offset+rtt/2' with line, \\"
@@ -69,7 +69,7 @@ echo "$titles" | while read file title; do
       else
         FIFTY=`../bin/percentile 3 50 $file | ../bin/mul 1000000`
         CUSTOM="set label 1 gprintf('50%% = $FIFTY µs',50) at graph 0.01,0.05 left front"
-        LINSCALELIMIT=`../bin/linscalelimit 1 3 $file | ../bin/mul 1000000`
+        LINSCALELIMIT=`../bin/linscalelimit 1 3 80 $file | ../bin/mul 1000000`
         ../bin/graph-header remote-${imagename} $TERMINAL $LINSCALELIMIT "%1.0f µs" "$title Offset" "$CUSTOM"
         echo "'$file' using 1:(\$4*1000000) title 'offset' with line, \\"
         echo "$FIFTY title '50th percentile'"
