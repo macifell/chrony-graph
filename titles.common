@@ -43,6 +43,11 @@ statistics.192.53.103.104 ptbtime2.ptb.de/IPv4
 statistics.2001:638:610:be01::104 ptbtime2.ptb.de/IPv6
 statistics.192.53.103.103 ptbtime3.ptb.de/IPv4
 statistics.2001:638:610:be01::103 ptbtime3.ptb.de/IPv6
+statistics.193.41.237.118 nts1.adopo.net/IPv4
+statistics.94.16.114.254 www.jabber-germany.de/IPv4
+statistics.2a03:4000:28:365::1 www.jabber-germany.de/IPv6
+statistics.185.244.195.159 www.masters-of-cloud.de/IPv4
+statistics.2a03:4000:27:602:d4cf:50ff:fedb:b65a www.masters-of-cloud.de/IPv6
 
 # DE
 statistics.134.34.3.18 time1.uni-konstanz.de/IPv4
