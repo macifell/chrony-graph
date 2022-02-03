@@ -1,6 +1,10 @@
 #!/bin/sh
+
 INTERVAL=61
 exclude="--exclude index.html.tmpl --exclude notes --exclude run-cron"
+
+# Do not use linlog axes for Remote Clocks Summary for readability
+export FORCE_LINEAR_ALLSTAR=1
 
 ./substitute.sh web/*.IN
 rsync -au $exclude web/. /web
