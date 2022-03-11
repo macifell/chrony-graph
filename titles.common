@@ -11,7 +11,7 @@ statistics.85.195.224.28 ntp.zeitgitter.net/IPv4
 statistics.2a02:168:fa16:1::80 ntp.zeitgitter.net/IPv6
 
 statistics.81.6.46.231 gpstime.trifence.ch/IPv4
-statistics.185.137.172.82 tricorder.trifence.ch/IPv4
+statistics.185.137.172.42 tricorder.trifence.ch/IPv4
 
 statistics.62.12.167.109 ntp.3eck.net/IPv4
 statistics.2001:8a8:4008::109 ntp.3eck.net/IPv6
@@ -64,6 +64,7 @@ statistics.194.58.202.201 nts.ntp.se/IPv4
 statistics.2a01:3f7:2:202::201 nts.ntp.se/IPv6
 statistics.194.58.202.202 ntsts.sth.ntp.se/IPv4
 statistics.2a01:3f7:2:202::202 ntsts.sth.ntp.se/IPv6
+statistics.2a01:3f7:2:44::8 sth1-ts.nts.netnod.se/IPv6
 
 ###
 ### Americas
