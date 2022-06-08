@@ -32,7 +32,7 @@ statistics.195.176.26.206 ntp13.metas.ch/IPv4
 
 statistics.84.16.73.33 tick.ntp.infomaniak.ch/IPv4
 statistics.2001:1600:4:1::123 tick.ntp.infomaniak.ch/IPv6
-statistics.84.16.73.33 tock.ntp.infomaniak.ch/IPv4
+statistics.84.16.67.12 tock.ntp.infomaniak.ch/IPv4
 statistics.2001:1600:3:6::123 tock.ntp.infomaniak.ch/IPv6
 statistics.185.125.24.59 falseticker.ntp.infomaniak.ch/IPv4
 
@@ -65,6 +65,7 @@ statistics.2a01:3f7:2:202::201 nts.ntp.se/IPv6
 statistics.194.58.202.202 ntsts.sth.ntp.se/IPv4
 statistics.2a01:3f7:2:202::202 ntsts.sth.ntp.se/IPv6
 statistics.2a01:3f7:2:44::8 sth1-ts.nts.netnod.se/IPv6
+statistics.194.58.207.80 sth2-ts.nts.netnod.se/IPv4
 
 ###
 ### Americas
@@ -92,6 +93,9 @@ statistics.170.187.158.81 time-atl.0xt.ca/IPv4
 statistics.2600:3c02::f03c:92ff:fe00:1f5c time-atl.0xt.ca/IPv6
 statistics.45.33.37.82 time-sjc.0xt.ca/IPv4
 statistics.2600:3c01::f03c:92ff:fe96:b862 time-sjc.0xt.ca/IPv6
+statistics.3.134.129.152 ohio.time.system76.com
+statistics.52.10.183.132 oregon.time.system76.com
+statistics.3.220.42.39 virginia.time.system76.com
 
 ###
 ### Global
