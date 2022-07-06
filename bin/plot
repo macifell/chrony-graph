@@ -169,7 +169,3 @@ done
 if [ -x custom-plot ]; then
   ./custom-plot
 fi
-
-if [ -x ../bin/copy-to-website ]; then
-  ../bin/copy-to-website
-fi
