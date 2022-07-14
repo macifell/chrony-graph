@@ -12,7 +12,8 @@ statistics.2a02:168:fa16:1::80 ntp.zeitgitter.net/IPv6
 
 statistics.81.6.46.231 gpstime.trifence.ch/IPv4
 statistics.185.137.172.42 tricorder.trifence.ch/IPv4/old
-statistics.185.137.172.71 tricorder.trifence.ch/IPv4
+statistics.185.137.172.71 tricorder.trifence.ch/IPv4/old2
+statistics.185.137.172.111 tricorder.trifence.ch/IPv4
 statistics.2a02:168:2000:58::20 tricorder.trifence.ch/IPv6
 
 statistics.62.12.167.109 ntp.3eck.net/IPv4
