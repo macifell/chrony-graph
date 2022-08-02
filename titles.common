@@ -21,6 +21,8 @@ statistics.2001:8a8:4008::109 ntp.3eck.net/IPv6
 
 statistics.89.217.129.163 time.signorini.ch/IPv4
 
+statistics.62.12.141.196 ntp.bopp.ch
+
 # CH
 statistics.192.33.96.102 time2.ethz.ch/IPv4
 
@@ -51,6 +53,8 @@ statistics.94.16.114.254 www.jabber-germany.de/IPv4
 statistics.2a03:4000:28:365::1 www.jabber-germany.de/IPv6
 statistics.185.244.195.159 www.masters-of-cloud.de/IPv4
 statistics.2a03:4000:27:602:d4cf:50ff:fedb:b65a www.masters-of-cloud.de/IPv6
+statistics.131.188.3.223 ntp3.fau.de
+statistics.2001:638:a000:1123:123::4 ntp3.ipv6.fau.de
 
 # DE
 statistics.134.34.3.18 time1.uni-konstanz.de/IPv4
