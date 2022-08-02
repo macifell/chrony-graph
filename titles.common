@@ -60,7 +60,11 @@ statistics.2001:7c0:2800::3:19 time2.uni-konstanz.de/IPv4
 
 # NL NTS
 statistics.94.198.159.11 nts.time.nl/IPv4
+statistics.94.198.159.15 ntppool1.time.nl/IPv4
+statistics.94.198.159.16 ntppool2.time.nl/IPv4
 statistics.2a00:d78:0:712:94:198:159:11 nts.time.nl/IPv6
+statistics.2a00:d78:0:712:94:198:159:15 ntppool1.time.nl/IPv6
+statistics.2a00:d78:0:712:94:198:159:16 ntppool2.time.nl/IPv6
 
 # SE NTS
 statistics.194.58.202.201 nts.ntp.se/IPv4
