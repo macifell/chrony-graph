@@ -109,6 +109,14 @@ statistics.52.10.183.132 oregon.time.system76.com
 statistics.3.220.42.39 virginia.time.system76.com
 
 ###
+### Asia
+###
+
+# SG NTS
+statistics.203.123.48.219 ntpmon.dcs1.biz/IPv4
+statistics.2405:fc00:0:1::123 ntpmon.dcs1.biz/IPv6
+
+###
 ### Global
 ###
 
