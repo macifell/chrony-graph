@@ -62,6 +62,9 @@ statistics.2001:7c0:2800::3:18 time1.uni-konstanz.de/IPv4
 statistics.134.34.3.19 time2.uni-konstanz.de/IPv4
 statistics.2001:7c0:2800::3:19 time2.uni-konstanz.de/IPv4
 
+# FR NTS
+statistics.15.237.97.214 paris.time.system76.com
+
 # NL NTS
 statistics.94.198.159.11 nts.time.nl/IPv4
 statistics.94.198.159.15 ntppool1.time.nl/IPv4
@@ -90,6 +93,8 @@ statistics.200.186.125.195 c.st1.ntp.br/IPv4
 statistics.200.20.186.76 d.st1.ntp.br/IPv4
 statistics.200.160.7.197 gps.ntp.br/IPv4
 statistics.2001:12ff:0:7::197 gps.ntp.br/IPv6
+
+statistics.18.228.202.30 brazil.time.system76.com
 
 # CA NTS
 statistics.172.105.3.84 time.0xt.ca/IPv4
