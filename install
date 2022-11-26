@@ -1,20 +1,26 @@
 #! /usr/bin/env python3
 
 import os
+import shutil
 import sys
 
 from string import Template
 from subprocess import check_call
+from subprocess import check_output
 
-EXEC       = 'chrony-graph-loop'
-SERVICE    = 'chrony-graph.service'
-SYSTEM_DIR = '/etc/systemd/system'
+EXEC          = 'chrony-graph-loop'
+SERVICE       = 'chrony-graph.service'
+SYSTEM_DIR    = '/etc/systemd/system'
+CONFIG        = 'chrony-graph.conf'
+SAMPLE_CONFIG = 'chrony-graph.sample.conf'
+CONFIG_DIR    = '/etc/chrony-graph'
 
 CURRENT_DIR      = os.path.dirname(os.path.realpath(__file__))
 EXEC_PATH        = os.path.join(CURRENT_DIR, EXEC)
 SERVICE_TEMPLATE = os.path.join(CURRENT_DIR, SERVICE)
 SERVICE_FILE     = os.path.join(SYSTEM_DIR, SERVICE)
-USER             = 1000
+CONFIG_FILE      = os.path.join(CONFIG_DIR, CONFIG)
+USER             = check_output(['logname']).decode('utf-8').strip()
 
 with open(SERVICE_TEMPLATE) as f:
     serviceTemplate = Template(f.read())
@@ -27,6 +33,10 @@ serviceFile = serviceTemplate.substitute(
 
 with open(SERVICE_FILE, 'w') as f:
     f.write(serviceFile)
+
+if not os.path.exists(CONFIG_FILE):
+    os.makedirs(CONFIG_DIR, exist_ok=True)
+    shutil.copy(SAMPLE_CONFIG, CONFIG_FILE)
 
 check_call(['systemctl', 'daemon-reload'])
 check_call(['systemctl', 'enable', '--no-pager', SERVICE])
