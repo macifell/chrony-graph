@@ -1,29 +1,49 @@
-This is for graphing logs from chrony.  See the branch "ntpd" for ntpd/ntpsec graphs
+# chrony-graph
 
-Packages needed:
+This is for graphing logs from chrony.
 
-	perl-DateTime
-	liberation-sans-fonts
-	gnuplot (needs Cairo/Pango support for best graphs)
-	bc
+## Dependencies
+```
+sudo apt install libdatetime-perl gnuplot bc fonts-liberation
+```
 
-To setup:
+## Configuration
+```
+sudo mkdir -p /etc/chrony-graph/
+cp ./chrony-graph.sample.conf /etc/chrony-graph/chrony-graph.conf
+# customize this file for your environment
+```
 
-	cp bin/copy-to-website.example bin/copy-to-website
-	# edit bin/copy-to-website to copy the files to your website
-	cp titles.example titles
-	# edit titles to have the IPs and hostnames of your remote clocks
-	cp -a runX run1
-	# edit run1/index.html.tmpl to show the graphs for the IPs of the remote clocks
-	# edit bin/run if your logdir is different: LOGDIR=/var/log/chrony
+## Installation
+```
+sudo ./install
+```
 
-To run (under screen/tmux):
+## Output
+By default output will be in `/var/log/syslog`.
+A separate log file can be used by creating `/etc/rsyslog.d/30-chrony-graph.conf` containing:
+```
+if $programname == 'chrony-graph' then /var/log/chrony-graph.log
+& stop
+```
+and then restart the rsyslog service:
+```
+sudo systemctl restart rsyslog
+```
+This log file can be rotated by creating `/etc/logrotate.d/chrony-graph` containing:
+```
+/var/log/chrony-graph.log
+{
+        rotate 14
+        daily
+        create
+        missingok
+        notifempty
+        compress
+        delaycompress
+        postrotate
+                /usr/lib/rsyslog/rsyslog-rotate
+        endscript
+}
 
-	cd run1 ; ../bin/loop
-	# edit run1/notes to keep notes
-
-Optional scripts:
-
-	run1/startime - echo the unix timestamp to start at
-	run1/custom-plot - generate some custom plots
-	bin/copy-logfiles - download the logfiles from elsewhere, see copy-logfiles.example
+```

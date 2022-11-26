@@ -1,0 +1,16 @@
+[Unit]
+Description=Chrony Graph
+After=multi.user.target
+
+[Service]
+Type=simple
+WorkingDirectory=$workingDirectory
+ExecStart=$execStart
+Restart=on-failure
+SyslogIdentifier=chrony-graph
+EnvironmentFile=/etc/chrony-graph/chrony-graph.conf
+User=$user
+Group=_chrony
+
+[Install]
+WantedBy=multi-user.target

@@ -3,123 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <title>__THISHOST__ __ACCESS__ NTP/NTS Server</title>
-    <link rel="stylesheet" type="text/css" href="zeitgitter.css" />
-    <link rel="shortcut icon" href="ntp-zeitgitter.svg" />
-<!-- Matomo -->
-<script>
-    var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function() {
-    var u="//mate.trifence.ch/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '10']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Matomo Code -->
+    <link rel="stylesheet" type="text/css" href="web.css" />
   </head>
   <body>
     <ul class="header">
-      <li>
-        <a href="./" class="active"><img src="zg-white.svg" style="width:auto;" /> Home</a>
-      </li>
+      <li><a href="./" class="active"> Home</a></li>
       <li><a href="./day/">Daily Stats</a></li>
       <li><a href="./week/">Weekly Stats</a></li>
     </ul>
     <h1 class="top">__ACCESS__ NTP/NTS Server at __THISHOST__</h1>
     <p>
-      Timestamping, whether with Zeitgitter or any other mechanism, requires
-      accurate and reliable time sources. Our NTP/NTS servers help provide this
-      information to the public.
+      This server provides both unauthenticated (NTP) and authenticated (NTS) time services.
     </p>
-    <div class="box">
-      <h2>Zeitgitter?</h2>
-      <p>
-        <a href="https://zeitgitter.net"><img src="zeitgitter.svg" /></a>
-      </p>
-      <p>
-        Learn more about timestamping, Zeitgitter, the Zeitgitter network, how
-        to use it, and how to join it at
-        <a href="https://zeitgitter.net">zeitgitter.net</a>.
-      </p>
-    </div>
-    <h2>Accurate Time Sources</h2>
+    <h2>NTP</h2>
     <p>
-      The most accurate form of
-      <a href="https://en.wikipedia.org/wiki/Time">timekeeping</a> is by
-      <a href="https://en.wikipedia.org/wiki/Atomic_clock">atomic clocks</a>.
-      However, not every computer can be equipped with one of those bulky and
-      expensive devices. Therefore, the information from these clocks is
-      transmitted using radio waves (e.g.,
-      <a href="https://en.wikipedia.org/wiki/DCF77">DCF77</a> in Central Europe)
-      to inexpensive receivers. The most accurate time information available by
-      radio waves is through
-      <a href="https://en.wikipedia.org/wiki/Satellite_navigation"
-        >Global Navigation Satellite Systems</a
-      >, colloquially termed "GPS", where high-precision time information is the
-      basis for geolocation.
-    </p>
-    <p>
-      But even these radio wave and "GPS" receivers require space and power.
-      Networked devices today therefore use their Internet connection to obtain
-      pretty accurate time information. This time is transmitted using
-      <a href="https://en.wikipedia.org/wiki/Network_Time_Protocol"
-        >NTP, the Network Time Protocol</a
-      >
-      and achieves sub-second accuracy, down to roughly millisecond accuracy,
-      depending on network conditions.
-    </p>
-    <h2>Trustworthy Time Source</h2>
-    <p>
-      NTP was designed in the mid-1980s, when the Internet essentially was a
-      small, friendly, and cooperative space. Therefore, relatively little
-      thought was given how to widely prevent malicious people from manipulating
-      the time other computers on the network will see.
-    </p>
-    <p>
-      This has only changed recently, with the advent of
-      <a href="https://fedoramagazine.org/secure-ntp-with-nts/"
-        >NTS, Network Time Security</a
-      >. NTS is to NTP pretty much as
-      <a href="https://en.wikipedia.org/wiki/HTTPS">HTTPS</a> is to HTTP: You
-      can be sure that the information actually comes from the named server and
-      has not been tampered with by anyone controlling Internet equipment or
-      wireless base stations.
-    </p>
-    <p>
-      Still, you have no guarantee that the other side is not lying to you about
-      its time. But at least you would know, <b>who</b> was lying to you. And
-      you could talk to multiple NTS servers operated by different
-      organisations: it is unlikely that they <b>all</b> will lie to you, and
-      all in the same way.
-    </p>
-    <div class="box">
-      <p>
-        So, with NTS, you are not completely safe from bad time information, but
-        it would be extremely hard and costly to fake time, such that it will
-        not become obvious and people can be held accountable.
-      </p>
-    </div>
-    <h2>Public NTS server</h2>
-    <p>
-      Therefore, <a href="https://trifence.ch">Trifence AG</a> operates two free
-      public NTS/NTP time servers in Switzerland, at
-      <a href="https://ntp.zeitgitter.net"><code>ntp.zeitgitter.net</code></a>
-      and <a href="https://ntp.trifence.ch"><code>ntp.trifence.ch</code></a
-      >. These servers can also be used like traditional NTP servers (the
-      protocol is upward compatible) and are also part of the
-      <a href="https://www.ntppool.org">global NTP timeservers pool</a>.
-    </p>
-    <h2>NTS Usage</h2>
-    <p>
-      Their NTP function, providing mostly accurate but unauthenticated time,
+      The NTP function, providing mostly accurate but unauthenticated time,
       can be used like you would any other time server.
     </p>
+    <h2>NTS</h2>
     <p>
-      To use their additional NTS authentication feature, NTS-capable software
+      To use the additional NTS authentication feature, NTS-capable software
       has an <code>NTS</code> flag, which you can turn on. On the popular
       <a href="https://docs.ntpsec.org/latest/NTS-QuickStart.html">NTPsec</a> or
       <a href="https://chrony.tuxfamily.org/">Chrony</a> software, the
@@ -127,100 +30,12 @@
     </p>
     <div class="box">
       <pre>
-server ntp.zeitgitter.net iburst nts
-server ntp.trifence.ch    iburst nts</pre
+server __THISHOST__ iburst nts</pre
       >
     </div>
     <p>
       The <code>nts</code> flag at the very end of the line indicates that time
       will only be used if it is properly authenticated.
     </p>
-    <h2>Trust? Transparency!</h2>
-    <p>
-      We provide transparency about our timeservers, so you have a basis of
-      whether you want to trust our time servers. We provide
-      <a href="./day/">statistics over the last 24 hours</a> and
-      <a href="./week/">over the past week</a>, updated multiple times a day.
-      They are generated with
-      <a href="https://github.com/MarcelWaldvogel/chrony-graph/"
-        ><code>chrony-graph</code></a
-      >.
-    </p>
-    <p>A second opinion about our timekeeping is collected by the NTP Pool:</p>
-    <ul>
-      <li>
-        <a href="https://www.ntppool.org/a/trifence"
-          >The NTP Pool production monitoring system</a
-        >
-      </li>
-      <li>
-        <a href="https://web.beta.grundclock.com/a/trifence"
-          >The NTP Pool beta test monitoring system</a
-        >
-      </li>
-    </ul>
-    <p>Why two systems?</p>
-    <ol>
-      <li>
-        The production monitor runs in California, over a
-        <a href="https://netfuture.ch/2022/01/debugging-nts-problems/#loss"
-          >transatlantic link, which sometimes loses NTP packets</a
-        >. That gives the impression that our time servers are unstable or
-        <em>malfunctioning</em>, even though they just work perfectly.
-      </li>
-      <li>
-        These californian systems also see a long delay and even small queueing
-        delays on the link may accumulate, so resulting in
-        <em>imprecision</em> as well.
-      </li>
-      <li>
-        The beta test monitors run both in California <em>and</em> in Amsterdam,
-        the latter not being affected as much by delay, jitter, and packet loss.
-        However, it seems that the clocks of the beta monitors are slightly less
-        stable. And, you wouldn't have guessed it, they are test systems, where
-        anything can go wrong at any time. You just can't have it all.
-      </li>
-    </ol>
-    <h2>More time servers needed!</h2>
-    <p>
-      NTS is a relatively young protocol, with only
-      <a
-        href="https://netfuture.ch/2021/12/transparent-trustworthy-time-with-ntp-and-nts/#server-list"
-        >a small selection of NTS-capable time servers currently available</a
-      >. If you are interested in reliable time,
-      <a
-        href="https://netfuture.ch/2022/01/configuring-an-nts-capable-ntp-server/"
-        >please consider upgrading your existing NTP time server to also support
-        NTS</a
-      >. It would be great if more official timekeeping sites, universities, and
-      companies around the world would join, in addition to volunteers. If you want to learn
-      more, here are some articles with a lot of information many pointers to
-      more resources:
-    </p>
-    <ol>
-      <li>
-        <a
-          href="https://netfuture.ch/2021/12/transparent-trustworthy-time-with-ntp-and-nts/"
-          >Transparent, Trustworthy Time with NTP and NTS</a
-        >: A motivation and introduction.
-      </li>
-      <li>
-        <a
-          href="https://netfuture.ch/2022/01/configuring-an-nts-capable-ntp-server/"
-          >Configuring an NTS-capable NTP server</a
-        >: What to do and why
-      </li>
-      <li>
-        <a href="https://netfuture.ch/2022/01/nts-and-dynamic-ip-addresses/"
-          >NTS and dynamic IP addresses</a
-        >: What to take care of when running an NTS server behind a dynamic IP
-        address
-      </li>
-      <li>
-        <a href="https://netfuture.ch/2022/01/debugging-nts-problems/"
-          >Debugging NTS problems</a
-        >: Know-how and tools for detecting and fixing strange behavior
-      </li>
-    </ol>
   </body>
 </html>

@@ -81,4 +81,4 @@ fi
 rm -f remote-statistics.*
 ../bin/plot
 ../bin/index >index.html
-../bin/copy-to-website
+# ../bin/copy-to-website

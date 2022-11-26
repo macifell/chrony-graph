@@ -3,35 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <title>NTP/NTS __FREQ__ Statistics at __THISHOST__</title>
-    <link rel="stylesheet" type="text/css" href="../zeitgitter.css" />
-    <link rel="shortcut icon" href="../ntp-zeitgitter.svg" />
+    <link rel="stylesheet" type="text/css" href="../web.css" />
     <meta http-equiv="refresh" content="500" />
-<!-- Matomo -->
-<script>
-  var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  _paq.push(['disableCookies']);
-  (function() {
-    var u="//mate.trifence.ch/";
-    _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '10']);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-  })();
-</script>
-<!-- End Matomo Code -->
   </head>
   <body>
     <ul class="header">
-      <li>
-        <a href="../"><img src="../zg-white.svg" style="width:auto;" /> Home</a>
-      </li>
+      <li><a href="../">Home</a></li>
       <li><a href="./" class="active">Daily Stats</a></li>
       <li><a href="../week/">Weekly Stats</a></li>
     </ul>
-    <img src="../ntp-zeitgitter.svg" style="width:20%;float:right;margin:2em;" />
 <h1>__THISHOST__ __FREQ__</h1>
 <p>
 <b>Report generated:</b> __TIME__<br />
@@ -44,8 +24,6 @@
 <li><a href="#local">Local Clock</a></li>
 <li><a href="#remote">Remote Clocks Summary</a></li>
 <li><a href="#detail">Remote Clocks Details</a></li>
-<li><a href="#vantage">Other Vantage Points</a></li>
-<li><a href="#more">More Information</a></li>
 </ul>
 
 <h2><a name="local"></a>Local Clock</h2>
@@ -64,24 +42,5 @@
 <h2><a name="detail"></a>Remote Clocks Details</h2>
 __ALL_REMOTES_WITH_LINK__
 
-<h2><a name="vantage"></a>Other Vantage Points</h2>
-<p>Any view just from a single point is incomplete. So, have a look at my neighbors and others watching me:</p>
-<ul>
-<li><a href="https://gpstime.trifence.ch/day/"><code>gpstime.trifence.ch</code></a>, the Stratum-1 GPS receiver and — whenever possible — source of truth (not a public <a href="https://netfuture.ch/2022/01/nts-network-time-security/">NTS</a>/NTP time server)</li>
-<li><a href="https://ntp.trifence.ch/day/"><code>ntp.trifence.ch</code></a>, public NTS/NTP time server</li>
-<li><a href="https://ntp.zeitgitter.net/day/"><code>ntp.zeitgitter.net</code></a>, public NTS/NTP time server</li>
-<li><a href="https://monitoring.zeitgitter.net/day/"><code>monitoring.zeitgitter.net</code></a>, maintains an overview over all public NTS servers (and then some). <span color="#888">This is running on a VM, so introduces some additional jitter. Therefore, take it with a grain of salt.</span></li>
-<li><a href="https://tricorder.trifence.ch/day/"><code>tricorder.trifence.ch</code></a></li>
-<li><a href="https://ntp.3eck.net/"><code>ntp.3eck.net</code></a>, public Stratum-1 NTS/NTP time server, operated by <a href="https://3eck.net/">Genossenschaft Dreieck<a/></li>
-<li><a href="https://www.ntppool.org/a/trifence">View from the NTP Pool (production system, California)</a></li>
-<li><a href="https://web.beta.grundclock.com/a/trifence">View from the NTP Pool (test system, several locations)</a></li>
-</ul>
-
-<h2><a name="more"></a>More Information</h2>
-<ul>
-<li><a href="https://netfuture.ch/2021/12/transparent-trustworthy-time-with-ntp-and-nts/#server-list">List of public NTS-capable NTP servers</a></li>
-<li><a href="https://netfuture.ch/2022/01/nts-network-time-security/">All about NTS: Why and how</a></li>
-<li><a href="https://github.com/MarcelWaldvogel/chrony-graph">Git repository for this version of chrony-graph</a></li>
-</ul>
 </body>
 </html>

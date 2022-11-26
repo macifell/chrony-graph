@@ -1,0 +1,34 @@
+#! /usr/bin/env python3
+
+import os
+import sys
+
+from string import Template
+from subprocess import check_call
+
+EXEC       = 'chrony-graph-loop'
+SERVICE    = 'chrony-graph.service'
+SYSTEM_DIR = '/etc/systemd/system'
+
+CURRENT_DIR      = os.path.dirname(os.path.realpath(__file__))
+EXEC_PATH        = os.path.join(CURRENT_DIR, EXEC)
+SERVICE_TEMPLATE = os.path.join(CURRENT_DIR, SERVICE)
+SERVICE_FILE     = os.path.join(SYSTEM_DIR, SERVICE)
+USER             = 1000
+
+with open(SERVICE_TEMPLATE) as f:
+    serviceTemplate = Template(f.read())
+
+serviceFile = serviceTemplate.substitute(
+    workingDirectory=CURRENT_DIR,
+    execStart=EXEC_PATH,
+    user=USER
+)
+
+with open(SERVICE_FILE, 'w') as f:
+    f.write(serviceFile)
+
+check_call(['systemctl', 'daemon-reload'])
+check_call(['systemctl', 'enable', '--no-pager', SERVICE])
+check_call(['systemctl', 'restart', '--no-pager', SERVICE])
+check_call(['systemctl', 'status', '--no-pager', SERVICE])
