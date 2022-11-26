@@ -14,14 +14,24 @@
     <li><a href="./weekly/">Weekly Stats</a></li>
   </ul>
   <h1 class="top">__ACCESS__ NTP/NTS Server at __THISHOST__</h1>
+
   <p>
     This server provides both unauthenticated (NTP) and authenticated (NTS) time services.
+    You are encouraged to use NTS where possible.
   </p>
+
+  <p>
+    <b>Stratum:</b> __STRATUM__
+    <br />
+    <b>Reference:</b> __REFERENCE__
+  </p>
+
   <h2>NTP</h2>
   <p>
     The NTP function, providing mostly accurate but unauthenticated time,
     can be used like you would any other time server.
   </p>
+
   <h2>NTS</h2>
   <p>
     To use the additional NTS authentication feature, NTS-capable software
