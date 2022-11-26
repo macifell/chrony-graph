@@ -24,13 +24,6 @@ read_hash('../titles', \%titles);
 my $RUN=cwd();
 $RUN = basename($RUN);
 
-open(NOTES,"<","notes");
-my $NOTES=join("",<NOTES>);
-close(NOTES);
-$NOTES =~ s/</&lt;/g;
-$NOTES =~ s/>/&gt;/g;
-$NOTES =~ s/&/&amp;/g;
-
 my $time = DateTime->now->iso8601;
 
 my $THISHOST = $ENV{THISHOST};
@@ -58,7 +51,6 @@ foreach my $r (@remotes) {
 open(TMPL,"<","index.html.tmpl");
 while(<TMPL>) {
   s/__RUN__/$RUN/g;
-  s/__NOTES__/$NOTES/g;
   s/__TIME__/$time/g;
   s/__THISHOST__/$THISHOST/g;
   s/__FREQ__/$FREQ/g;
