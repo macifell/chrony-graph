@@ -21,36 +21,6 @@ titles=$(
   done
 )
 
-#(
-#  ../bin/graph-header remote-strat1 $TERMINAL "%1.0f µs" "Offset Of Remote Stratum-1s" ""
-#  i=0
-#  echo "$titles" | while read file title; do
-#    if [ $i != 0 ]; then
-#      echo -n ,
-#    else
-#      i=1
-#    fi
-#    echo "'$file' using 1:(\$4*1000000) title '$title' with line \\"
-#  done
-#) | gnuplot
-#
-#(
-#  ../bin/graph-header remote-strat1-downstream $TERMINAL "%1.0f µs" "Offset-RTT/2 Of Remote Stratum-1s" ""
-#  i=0
-#  echo "$titles" | while read file title; do
-#    measurements_file=`echo $file | sed 's/^statistics/measurements/'`
-#    if [ -f $measurements_file ]; then
-#      if [ $i != 0 ]; then
-#        echo -n ,
-#      else
-#        i=1
-#      fi
-#      echo "'$measurements_file' using 1:((\$11-\$12/2)*1000000) title '$title' with line \\"
-#    fi
-#  done
-#  echo
-#) | gnuplot
-
 echo "$titles" | while read file title; do
   imagename=`echo $file | sed 's/:/_/g'`
   measurements_file=`echo $file | sed 's/^statistics/measurements/'`

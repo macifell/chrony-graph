@@ -8,7 +8,7 @@ for i in "$@"
 do
   sed -e "s/__THISHOST__/${THISHOST:-this host}/" \
       -e "s/__ACCESS__/${ACCESS:-Public}/" \
-      -e "s/__STRATUM__/${stratum:-0}/" \
+      -e "s/__STRATUM__/${stratum:-99}/" \
       -e "s/__REFERENCE__/${reference:-REF}/" \
     < "$i" > "${i/.IN/}"
 done
