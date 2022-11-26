@@ -1,21 +1,21 @@
 #!/bin/bash
 
 INTERVAL=61
-exclude="--exclude index.html.tmpl --exclude index.html.IN"
+exclude="--exclude index.html.tmpl --exclude index.html.IN --exclude measurements.* --exclude statistics.* --exclude tracking.*"
 
 # Do not use linlog axes for Remote Clocks Summary for readability
 export FORCE_LINEAR_ALLSTAR=1
 
-./substitute.sh web/*.IN
-rsync -au $exclude web/. ./www
+./substitute.sh home/*.IN
+rsync -au $exclude home/. ./www
 
 while true; do
-  (cd week && FREQ=Weekly ../bin/run --plus-svg 7)
-  rsync -au $exclude week ./www
+  (cd weekly && FREQ=Weekly ../bin/run --plus-svg 7)
+  rsync -au $exclude weekly ./www
 
   for i in 1 2 3 4 5 6; do
-    (cd day && FREQ=Daily ../bin/run --plus-svg 1)
-    rsync -au $exclude day ./www
+    (cd daily && FREQ=Daily ../bin/run --plus-svg 1)
+    rsync -au $exclude daily ./www
     sleep $INTERVAL
   done
 done
