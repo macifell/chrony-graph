@@ -6,7 +6,7 @@ exclude="--exclude index.html.tmpl --exclude index.html.IN --exclude measurement
 # Do not use linlog axes for Remote Clocks Summary for readability
 export FORCE_LINEAR_ALLSTAR=1
 
-./substitute home/*.IN
+./bin/substitute home/*.IN
 rsync -au $exclude home/. ./www
 
 while true; do
@@ -17,7 +17,7 @@ while true; do
     (cd daily && FREQ=Daily ../bin/run --plus-svg 1)
     rsync -au $exclude daily ./www
 
-    ./substitute home/*.IN
+    ./bin/substitute home/*.IN
     rsync -au $exclude home/. ./www
 
     sleep $INTERVAL
