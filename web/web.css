@@ -4,46 +4,56 @@ html {
   font-size: 1.5rem;
   margin-top: 0;
 }
+
 body {
   margin-top: 0;
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto;
 }
+
 h1,
 h2 {
   color: #008dd2;
 }
+
 h2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .box h2 {
   margin-top: 0;
 }
+
 h1,
 h2,
 p {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
+
 p {
   margin-top: 0.5rem;
   margin-bottom: 0;
   hyphens: auto;
 }
+
 p.intermezzo {
   color: #008dd2;
 }
+
 a:link,
 a:active,
 a:visited,
 a:hover {
   color: #00519a;
 }
+
 code {
   color: #008dd2;
 }
+
 img {
   width: 50%;
 }
@@ -56,21 +66,26 @@ table {
   font-size: 0.3rem;
   background-color: #eee;
 }
+
 thead {
   font-weight: bold;
 }
+
 tbody tr {
   vertical-align: top;
 }
+
 tbody tr:nth-child(6n + 4),
 tbody tr:nth-child(6n + 5),
 tbody tr:nth-child(6n + 6) {
   background-color: rgba(0, 141, 210, 0.2);
 }
+
 table td:nth-child(even) {
   color: #008dd2;
   background-color: rgba(255, 255, 255, 0.2);
 }
+
 dt {
   font-weight: bold;
   color: #008dd2;
@@ -86,15 +101,19 @@ dt {
   background-color: #d0f0ff;
   border: solid #008dd2 2px;
 }
+
 .box p {
   margin-bottom: 0.5rem;
 }
+
 .box p:first-child {
   margin-top: 0;
 }
+
 .box img {
   width: 100%;
 }
+
 .box pre {
   margin: 0.5rem;
   margin-top: 0;
@@ -110,10 +129,12 @@ ul.header {
   padding: 0;
   overflow: hidden;
 }
+
 ul.header li {
   flex: 1 1 auto;
   border-right: 1px solid #bbb;
 }
+
 ul.header img {
   margin-left: 0.5rem;
   margin-top: -1.5em;
@@ -121,6 +142,7 @@ ul.header img {
   padding-right: 0.5em;
   height: 2.5em;
 }
+
 ul.header li a {
   display: block;
   color: #fff;
@@ -134,9 +156,11 @@ ul.header li a {
   height: 3em;
   line-height: 3em;
 }
+
 ul.header li a.active {
   background-color: #008dd2;
 }
+
 body ul.header li a:hover {
   background-color: #00334c;
 }

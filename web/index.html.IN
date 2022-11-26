@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>__THISHOST__ __ACCESS__ NTP/NTS Server</title>
-    <link rel="stylesheet" type="text/css" href="web.css" />
-  </head>
-  <body>
-    <ul class="header">
-      <li><a href="./" class="active"> Home</a></li>
-      <li><a href="./day/">Daily Stats</a></li>
-      <li><a href="./week/">Weekly Stats</a></li>
-    </ul>
-    <h1 class="top">__ACCESS__ NTP/NTS Server at __THISHOST__</h1>
-    <p>
-      This server provides both unauthenticated (NTP) and authenticated (NTS) time services.
-    </p>
-    <h2>NTP</h2>
-    <p>
-      The NTP function, providing mostly accurate but unauthenticated time,
-      can be used like you would any other time server.
-    </p>
-    <h2>NTS</h2>
-    <p>
-      To use the additional NTS authentication feature, NTS-capable software
-      has an <code>NTS</code> flag, which you can turn on. On the popular
-      <a href="https://docs.ntpsec.org/latest/NTS-QuickStart.html">NTPsec</a> or
-      <a href="https://chrony.tuxfamily.org/">Chrony</a> software, the
-      configuration is as follows:
-    </p>
-    <div class="box">
-      <pre>
-server __THISHOST__ iburst nts</pre
-      >
-    </div>
-    <p>
-      The <code>nts</code> flag at the very end of the line indicates that time
-      will only be used if it is properly authenticated.
-    </p>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>__THISHOST__ __ACCESS__ NTP/NTS Server</title>
+  <link rel="stylesheet" type="text/css" href="web.css" />
+</head>
+
+<body>
+  <ul class="header">
+    <li><a href="./" class="active"> Home</a></li>
+    <li><a href="./day/">Daily Stats</a></li>
+    <li><a href="./week/">Weekly Stats</a></li>
+  </ul>
+  <h1 class="top">__ACCESS__ NTP/NTS Server at __THISHOST__</h1>
+  <p>
+    This server provides both unauthenticated (NTP) and authenticated (NTS) time services.
+  </p>
+  <h2>NTP</h2>
+  <p>
+    The NTP function, providing mostly accurate but unauthenticated time,
+    can be used like you would any other time server.
+  </p>
+  <h2>NTS</h2>
+  <p>
+    To use the additional NTS authentication feature, NTS-capable software
+    has an <code>NTS</code> flag, which you can turn on. On the popular
+    <a href="https://docs.ntpsec.org/latest/NTS-QuickStart.html">NTPsec</a> or
+    <a href="https://chrony.tuxfamily.org/">Chrony</a> software, the
+    configuration is as follows:
+  </p>
+  <div class="box">
+    <pre>
+server __THISHOST__ iburst nts</pre>
+  </div>
+  <p>
+    The <code>nts</code> flag at the very end of the line indicates that time
+    will only be used if it is properly authenticated.
+  </p>
+</body>
+
 </html>

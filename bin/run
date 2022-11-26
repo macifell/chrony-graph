@@ -28,13 +28,6 @@ else
   LOGDIR=/var/log/chrony
 fi
 
-if [ -x ../bin/copy-logfiles ]; then
-  test -d log-chrony || mkdir log-chrony
-  test -d log || mkdir log
-  ../bin/copy-logfiles
-  LOGDIR=log-chrony
-fi
-
 function limit_time {
   awk '{if($1 > '$STARTIME') { print }}'
 }
@@ -81,4 +74,3 @@ fi
 rm -f remote-statistics.*
 ../bin/plot
 ../bin/index >index.html
-# ../bin/copy-to-website

@@ -4,7 +4,7 @@ This is for graphing logs from chrony.
 
 ## Dependencies
 ```
-sudo apt install libdatetime-perl gnuplot bc fonts-liberation
+sudo apt install bc python3 perl libdatetime-perl gnuplot-nox rsync fonts-liberation
 ```
 
 ## Configuration

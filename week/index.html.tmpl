@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>NTP/NTS __FREQ__ Statistics at __THISHOST__</title>
-    <link rel="stylesheet" type="text/css" href="../web.css" />
-    <meta http-equiv="refresh" content="500" />
-  </head>
-  <body>
-    <ul class="header">
-      <li><a href="../">Home</a></li>
-      <li><a href="../day/">Daily Stats</a></li>
-      <li><a href="./" class="active">Weekly Stats</a></li>
-    </ul>
-<h1>__THISHOST__ __FREQ__</h1>
-<p>
-<b>Report generated:</b> __TIME__<br />
-<b>Report period:</b> 7 days<br />
-<b>Time zone:</b> UTC<br />
-<b>Y axes:</b> Linear near origin, may turn logarithmic at the edges. Check the Y axes tics.
-</p>
-<h2>Index</h2>
-<ul>
-<li><a href="#local">Local Clock</a></li>
-<li><a href="#remote">Remote Clocks Summary</a></li>
-<li><a href="#detail">Remote Clocks Details</a></li>
-</ul>
 
-<h2><a name="local"></a>Local Clock</h2>
-<a href="local-clock.svg"><img src="local-clock.png" alt="Local Clock: Frequency + Offset" /></a
-><a href="percentiles.svg"><img src="percentiles.png" alt="Local Clock: Frequency detail" /></a
-><a href="percentiles-offset.svg"><img src="percentiles-offset.png" alt="Local Clock: Offset detail" /></a
-><a href="offset-histogram.svg"><img src="offset-histogram.png" alt="Local Clock: Offset histogram" /></a
-><a href="local-clock-skew.svg"><img src="local-clock-skew.png" alt="Local Clock: Skew" /></a
-><a href="local-clock-stddev.svg"><img src="local-clock-stddev.png" alt="Local Clock: stddev" /></a>
+<head>
+  <meta charset="UTF-8" />
+  <title>NTP/NTS __FREQ__ Statistics at __THISHOST__</title>
+  <link rel="stylesheet" type="text/css" href="../web.css" />
+  <meta http-equiv="refresh" content="500" />
+</head>
 
-<h2><a name="remote"></a>Remote Clocks Summary</h2>
-<a href="all-diff-freq.svg"><img src="all-diff-freq.png" alt="Remote Clocks: Frequency Difference" /></a
-><a href="all-offset.svg"><img src="all-offset.png" alt="Remote Clocks: Offsets" /></a
-><a href="all-skew.svg"><img src="all-skew.png" alt="Remote Clocks: Skew" /></a>
+<body>
+  <ul class="header">
+    <li><a href="../">Home</a></li>
+    <li><a href="../day/">Daily Stats</a></li>
+    <li><a href="./" class="active">Weekly Stats</a></li>
+  </ul>
 
-<h2><a name="detail"></a>Remote Clocks Details</h2>
-__ALL_REMOTES_WITH_LINK__
+  <h1>__THISHOST__ __FREQ__</h1>
+  <p>
+    <b>Report generated:</b> __TIME__<br />
+    <b>Report period:</b> 7 days<br />
+    <b>Time zone:</b> UTC<br />
+    <b>Y axes:</b> Linear near origin, may turn logarithmic at the edges. Check the Y axes tics.
+  </p>
 
+  <h2>Index</h2>
+  <ul>
+    <li><a href="#local">Local Clock</a></li>
+    <li><a href="#remote">Remote Clocks Summary</a></li>
+    <li><a href="#detail">Remote Clocks Details</a></li>
+  </ul>
+
+  <h2><a name="local"></a>Local Clock</h2>
+  <a href="local-clock.svg"><img src="local-clock.png" alt="Local Clock: Frequency + Offset" /></a><a
+    href="percentiles.svg"><img src="percentiles.png" alt="Local Clock: Frequency detail" /></a><a
+    href="percentiles-offset.svg"><img src="percentiles-offset.png" alt="Local Clock: Offset detail" /></a><a
+    href="offset-histogram.svg"><img src="offset-histogram.png" alt="Local Clock: Offset histogram" /></a><a
+    href="local-clock-skew.svg"><img src="local-clock-skew.png" alt="Local Clock: Skew" /></a><a
+    href="local-clock-stddev.svg"><img src="local-clock-stddev.png" alt="Local Clock: stddev" /></a>
+
+  <h2><a name="remote"></a>Remote Clocks Summary</h2>
+  <a href="all-diff-freq.svg"><img src="all-diff-freq.png" alt="Remote Clocks: Frequency Difference" /></a><a
+    href="all-offset.svg"><img src="all-offset.png" alt="Remote Clocks: Offsets" /></a><a href="all-skew.svg"><img
+      src="all-skew.png" alt="Remote Clocks: Skew" /></a>
+
+  <h2><a name="detail"></a>Remote Clocks Details</h2>
+  __ALL_REMOTES_WITH_LINK__
 </body>
+
 </html>

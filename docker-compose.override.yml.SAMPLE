@@ -1,8 +1,0 @@
-version: "2"
-
-services:
-  ntpviz:
-    environment:
-      THISHOST: ntp.zeitgitter.net
-    volumes:
-      - /data/docker/https-server/vhosts/ntp.zeitgitter.net:/web
