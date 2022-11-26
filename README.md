@@ -9,9 +9,8 @@ sudo apt install bc python3 perl libdatetime-perl gnuplot-nox rsync fonts-libera
 
 ## Configuration
 ```
-sudo mkdir -p /etc/chrony-graph/
-cp ./chrony-graph.sample.conf /etc/chrony-graph/chrony-graph.conf
 # customize this file for your environment
+/etc/chrony-graph/chrony-graph.conf
 ```
 
 ## Installation
