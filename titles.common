@@ -114,6 +114,12 @@ statistics.3.134.129.152 ohio.time.system76.com
 statistics.52.10.183.132 oregon.time.system76.com
 statistics.3.220.42.39 virginia.time.system76.com
 
+# US NIST (authenticated)
+statistics.132.163.96.5 ntp-b.nist.gov/SK
+statistics.132.163.97.5 ntp-wwv.nist.gov/SK
+statistics.128.138.141.177 ntp-c.colorado.edu/SK
+statistics.129.6.15.32 ntp-d.nist.gov/SK
+
 ###
 ### Asia
 ###
