@@ -1,10 +1,16 @@
 # chrony-graph
 
-This is for graphing logs from chrony.
+Create a website with useful information and graphs from chrony.
 
 ## Dependencies
+Debian
 ```
 sudo apt install bc python3 perl libdatetime-perl gnuplot-nox rsync fonts-liberation
+```
+
+## Installation
+```
+sudo ./install
 ```
 
 ## Configuration
@@ -13,10 +19,8 @@ sudo apt install bc python3 perl libdatetime-perl gnuplot-nox rsync fonts-libera
 /etc/chrony-graph/chrony-graph.conf
 ```
 
-## Installation
-```
-sudo ./install
-```
+## Deployment
+Point your webserver to the `./www` folder, which contains the full website.
 
 ## Output
 By default output will be in `/var/log/syslog`.
