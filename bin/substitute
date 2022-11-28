@@ -6,9 +6,10 @@ reference=$(chronyc tracking | grep 'Reference ID' | cut -d '(' -f2 | cut -d ')'
 # Replace template strings such as THISHOST, for host independence
 for i in "$@"
 do
-  sed -e "s/__THISHOST__/${THISHOST:-this host}/" \
+  sed -e "s/__THISHOST__/${THISHOST:-localhost}/" \
       -e "s/__ACCESS__/${ACCESS:-Public}/" \
       -e "s/__STRATUM__/${stratum:-99}/" \
-      -e "s/__REFERENCE__/${reference:-REF}/" \
+      -e "s/__REFERENCE__/${reference:-none}/" \
+      -e "s/__CONTACT__/${CONTACT:-none}/" \
     < "$i" > "${i/.IN/}"
 done
