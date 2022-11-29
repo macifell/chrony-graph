@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INTERVAL=61
+INTERVAL=121
 exclude="--exclude index.html.tmpl --exclude index.html.IN --exclude measurements.* --exclude statistics.* --exclude tracking.*"
 
 # Do not use linlog axes for Remote Clocks Summary for readability
