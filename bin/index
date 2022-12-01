@@ -24,7 +24,7 @@ read_hash('../titles', \%titles);
 my $RUN=cwd();
 $RUN = basename($RUN);
 
-my $time = DateTime->now->iso8601;
+my $time = DateTime->now->strftime("%F %T");
 
 my $THISHOST = $ENV{THISHOST};
 my $FREQ = $ENV{FREQ};
