@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>__THISHOST__ __ACCESS__ NTP/NTS Server</title>
+  <title>__THISHOST__ | __ACCESS__ NTP/NTS Server</title>
   <meta charset="UTF-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <link rel="stylesheet" type="text/css" href="web.css" />
