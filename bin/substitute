@@ -10,6 +10,7 @@ do
       -e "s/__ACCESS__/${ACCESS:-Public}/" \
       -e "s/__STRATUM__/${stratum:-99}/" \
       -e "s/__REFERENCE__/${reference:-none}/" \
+      -e "s/__LOCATION__/${LOCATION:-Earth}/" \
       -e "s/__CONTACT__/${CONTACT:-none}/" \
     < "$i" > "${i/.IN/}"
 done
