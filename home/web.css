@@ -117,6 +117,7 @@ dt {
 .box pre {
   margin: 0.5rem;
   margin-top: 0;
+  overflow: auto;
 }
 
 /* Header */
