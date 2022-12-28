@@ -35,27 +35,19 @@
     <b>Contact:</b> __CONTACT__
   </p>
 
-  <h2>NTP</h2>
-  <p>
-    The NTP function, providing mostly accurate but unauthenticated time,
-    can be used like you would any other time server.
-  </p>
-
   <h2>NTS</h2>
   <p>
-    To use the additional NTS authentication feature, NTS-capable software
-    has an <code>NTS</code> flag, which you can turn on. On the popular
+    To enable NTS authentication, use the following line in your config file for either
     <a href="https://docs.ntpsec.org/latest/NTS-QuickStart.html">NTPsec</a> or
-    <a href="https://chrony.tuxfamily.org/">Chrony</a> software, the
-    configuration is as follows:
+    <a href="https://chrony.tuxfamily.org/">chrony</a>:
   </p>
   <div class="box">
     <pre>
 server __THISHOST__ iburst nts</pre>
   </div>
   <p>
-    The <code>nts</code> flag at the very end of the line indicates that time
-    will only be used if it is properly authenticated.
+    The <code>nts</code> flag at the end of the line indicates that the time from this server will only be used if it is
+    properly authenticated.
   </p>
 </body>
 
