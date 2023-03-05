@@ -97,6 +97,7 @@ statistics.200.160.7.197 gps.ntp.br/IPv4
 statistics.2001:12ff:0:7::197 gps.ntp.br/IPv6
 
 statistics.18.228.202.30 brazil.time.system76.com
+statistics.2600:1f1e:197:2476:6368:b224:9619:1bf0 brazil.time.system76.com/IPv6
 
 # CA NTS
 statistics.172.105.3.84 time.0xt.ca/IPv4
