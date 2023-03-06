@@ -51,6 +51,7 @@ a:hover {
 
 code {
   color: #d9b66b;
+  letter-spacing: normal;
 }
 
 img {
@@ -76,6 +77,7 @@ img {
   margin: 0.5rem;
   margin-top: 0;
   overflow: auto;
+  letter-spacing: normal;
 }
 
 /* Header */
