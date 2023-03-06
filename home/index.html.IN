@@ -26,13 +26,13 @@
   </p>
 
   <p>
-    <b>Stratum -</b> <span class="value">__STRATUM__</span>
+    <b>Stratum -</b> __STRATUM__
     <br />
-    <b>Reference -</b> <span class="value">__REFERENCE__</span>
+    <b>Reference -</b> __REFERENCE__
     <br />
-    <b>Location -</b> <span class="value">__LOCATION__</span>
+    <b>Location -</b> __LOCATION__
     <br />
-    <b>Contact -</b> <span class="value">__CONTACT__</span>
+    <b>Contact -</b> __CONTACT__
   </p>
 
   <h2>NTS</h2>
@@ -42,8 +42,7 @@
     <a href="https://chrony.tuxfamily.org/">chrony</a>:
   </p>
   <div class="box">
-    <pre>
-server __THISHOST__ iburst nts</pre>
+    <pre>server __THISHOST__ iburst nts</pre>
   </div>
   <p>
     The <code>nts</code> flag at the end of the line indicates that the time from this server will only be used if it is

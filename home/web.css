@@ -24,7 +24,7 @@ h2 {
 }
 
 h2 {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -33,10 +33,6 @@ h2,
 p {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-}
-
-h2 {
-  margin-top: 1rem;
 }
 
 p {
@@ -63,29 +59,6 @@ img {
   box-sizing: border-box;
 }
 
-/* Tables */
-table {
-  text-align: right;
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.3rem;
-}
-
-thead {
-  font-weight: bold;
-}
-
-tbody tr {
-  vertical-align: top;
-}
-
-tbody tr:nth-child(6n + 4),
-tbody tr:nth-child(6n + 5),
-tbody tr:nth-child(6n + 6) {
-  background-color: rgba(0, 141, 210, 0.2);
-}
-
-
 /* Box */
 .box {
   margin-left: 0.5rem;
@@ -98,27 +71,11 @@ tbody tr:nth-child(6n + 6) {
   border-radius: 7px;
 }
 
-.box p {
-  margin-bottom: 0.5rem;
-}
-
-.box p:first-child {
-  margin-top: 0;
-}
-
-.box img {
-  width: 100%;
-}
-
 .box pre {
   color: #000000;
   margin: 0.5rem;
   margin-top: 0;
   overflow: auto;
-}
-
-ul {
-  font-family: arial;
 }
 
 /* Header */
