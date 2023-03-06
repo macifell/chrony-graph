@@ -26,13 +26,13 @@
   </p>
 
   <p>
-    <b>Stratum:</b> __STRATUM__
+    <b>Stratum -</b> <span class="value">__STRATUM__</span>
     <br />
-    <b>Reference:</b> __REFERENCE__
+    <b>Reference -</b> <span class="value">__REFERENCE__</span>
     <br />
-    <b>Location:</b> __LOCATION__
+    <b>Location -</b> <span class="value">__LOCATION__</span>
     <br />
-    <b>Contact:</b> __CONTACT__
+    <b>Contact -</b> <span class="value">__CONTACT__</span>
   </p>
 
   <h2>NTS</h2>
