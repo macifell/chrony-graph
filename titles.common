@@ -65,7 +65,7 @@ statistics.2001:7c0:2800::3:19 time2.uni-konstanz.de/IPv4
 
 # FR NTS
 statistics.15.237.97.214 paris.time.system76.com
-statistics.2a05:d012:549:fe76:1ec8:2e38:ea50:e5e7 paris.time.system76.com/IPv6
+statistics.2a05:d012:3ca:8100:983c:cae0:5e49:4d81 paris.time.system76.com/IPv6
 
 # NL NTS
 statistics.94.198.159.11 nts.time.nl/IPv4
@@ -97,24 +97,15 @@ statistics.200.160.7.197 gps.ntp.br/IPv4
 statistics.2001:12ff:0:7::197 gps.ntp.br/IPv6
 
 statistics.18.228.202.30 brazil.time.system76.com
-statistics.2600:1f1e:197:2476:6368:b224:9619:1bf0 brazil.time.system76.com/IPv6
-
-# CA NTS
-statistics.172.105.3.84 time.0xt.ca/IPv4
-statistics.2600:3c04::f03c:92ff:fe1b:67e7 time.0xt.ca/IPv6
+statistics.2600:1f1e:e88:8e00:b643:8f42:7320:9c3a brazil.time.system76.com/IPv6
 
 # US NTS
-statistics.172.104.193.207 time-dfw.0xt.ca/IPv4
-statistics.2600:3c00::f03c:92ff:feee:7d37 time-dfw.0xt.ca/IPv6
-statistics.45.33.68.112 time-ewr.0xt.ca/IPv4
-statistics.2600:3c03::f03c:92ff:fe96:444b time-ewr.0xt.ca/IPv6
-statistics.170.187.158.81 time-atl.0xt.ca/IPv4
-statistics.2600:3c02::f03c:92ff:fe00:1f5c time-atl.0xt.ca/IPv6
-statistics.45.33.37.82 time-sjc.0xt.ca/IPv4
-statistics.2600:3c01::f03c:92ff:fe96:b862 time-sjc.0xt.ca/IPv6
 statistics.3.134.129.152 ohio.time.system76.com
+statistics.2600:1f16:42a:1d00:2169:fe07:2acc:6002 ohio.time.system76.com/IPv6
 statistics.52.10.183.132 oregon.time.system76.com
+statistics.2600:1f13:eda:9800:bcd8:839c:9b40:25b2 oregon.time.system76.com/IPv6
 statistics.3.220.42.39 virginia.time.system76.com
+statistics.2600:1f18:4c51:e200:e142:210a:306d:4872 virginia.time.system76.com/IPv6
 
 # US NIST (authenticated)
 statistics.132.163.96.5 ntp-b.nist.gov/SK
