@@ -74,3 +74,4 @@ fi
 rm -f remote-statistics.*
 ../bin/plot
 ../bin/index >index.html
+../bin/gemini-index >index.gmi

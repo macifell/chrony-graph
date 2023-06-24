@@ -1,0 +1,20 @@
+### __ACCESS__ NTP/NTS Server at __THISHOST__
+
+Stratum: __STRATUM__
+Reference: __REFERENCE__
+Location: __LOCATION__
+Contact: __CONTACT__
+
+=> daily Daily Stats
+=> weekly Weekly Stats
+
+This server provides both unauthenticated (NTP) and authenticated (NTS) time services.
+You are encouraged to use NTS where possible.
+
+To enable NTS authentication, use the following line in your config file for either NTPsec or chrony:
+
+```
+server __THISHOST__ iburst nts
+```
+
+The nts flag at the end of the line indicates that the time from this server will only be used if it is properly authenticated.

@@ -1,24 +1,30 @@
 #!/bin/bash
 
-exclude="--exclude index.html.tmpl --exclude index.html.IN --exclude measurements.* --exclude statistics.* --exclude tracking.*"
+www_exclude=( --exclude "*.tmpl" --exclude "*.IN" --exclude "measurements.*" --exclude "statistics.*" --exclude "tracking.*" --exclude "*.gmi" )
+gemini_exclude=( --include="*/" --exclude="/*.png" --include="*.png" --include="*.gmi" --exclude="*" )
 
 # Do not use linlog axes for Remote Clocks Summary for readability
 export FORCE_LINEAR_ALLSTAR=1
 
 function generate_home () {
   ./bin/substitute home/*.IN
-  rsync -au $exclude home/. ./www
+  rsync -au "${www_exclude[@]}" home/. ./www
+  rsync -au "${gemini_exclude[@]}" home/. ./gemini/$THISHOST
 }
 
 function generate_daily () {
   (cd daily && FREQ=Daily ../bin/run --plus-svg 1)
-  rsync -au $exclude daily ./www
+  rsync -au "${www_exclude[@]}" daily ./www
+  rsync -au "${gemini_exclude[@]}" daily ./gemini/$THISHOST
 }
 
 function generate_weekly () {
   (cd weekly && FREQ=Weekly ../bin/run --plus-svg 7)
-  rsync -au $exclude weekly ./www
+  rsync -au "${www_exclude[@]}" weekly ./www
+  rsync -au "${gemini_exclude[@]}" weekly ./gemini/$THISHOST
 }
+
+mkdir -p ./gemini/$THISHOST
 
 generate_home
 generate_daily

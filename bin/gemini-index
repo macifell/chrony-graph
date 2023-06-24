@@ -30,31 +30,25 @@ my $THISHOST = $ENV{THISHOST};
 my $FREQ = $ENV{FREQ};
 
 my @remotes = glob("remote-statistics.[0-9G]*.png");
+
 my $ALL_REMOTES = "";
-my $ALL_REMOTES_WITH_LINK = "";
 foreach my $r (@remotes) {
   my $remote = $r;
   my $link = $r;
-  if ($ENV["GNUPLOT_TERMINALS"] == "png svg") {
-    $link =~ s/png$/svg/;
-  }
   $remote =~ s/^remote-statistics\.//;
-  $remote =~ s/\.(svg|png)$//;
+  $remote =~ s/\.png$//;
   my $key = $remote;
   $key =~ s/_/:/g;
   my $desc = $titles{"statistics.$key"} || $key;
-  my $img = "<img src=\"$r\" alt=\"Remote clock: $desc\" />";
+  my $img = "=> $r $desc\n";
   $ALL_REMOTES .= $img;
-  $ALL_REMOTES_WITH_LINK .= "<a href=\"$link\">$img</a>";
 }
 
-open(TMPL,"<","index.html.tmpl");
+open(TMPL,"<","index.gmi.tmpl");
 while(<TMPL>) {
-  s/__RUN__/$RUN/g;
   s/__TIME__/$time/g;
   s/__THISHOST__/$THISHOST/g;
   s/__FREQ__/$FREQ/g;
   s/__ALL_REMOTES__/$ALL_REMOTES/g;
-  s/__ALL_REMOTES_WITH_LINK__/$ALL_REMOTES_WITH_LINK/g;
   print;
 }

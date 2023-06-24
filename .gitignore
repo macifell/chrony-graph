@@ -5,9 +5,13 @@ run[0-9]*
 .env
 docker-compose.override.yml
 
+home/index.gmi
 home/index.html
 daily/*
+!daily/index.gmi.tmpl
 !daily/index.html.tmpl
 weekly/*
+!weekly/index.gmi.tmpl
 !weekly/index.html.tmpl
+gemini/
 www/
