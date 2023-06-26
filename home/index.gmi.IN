@@ -5,8 +5,8 @@ Reference: __REFERENCE__
 Location: __LOCATION__
 Contact: __CONTACT__
 
-=> daily Daily Stats
-=> weekly Weekly Stats
+=> daily/  Daily Stats
+=> weekly/ Weekly Stats
 
 This server provides both unauthenticated (NTP) and authenticated (NTS) time services.
 You are encouraged to use NTS where possible.
