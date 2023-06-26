@@ -8,8 +8,8 @@ export FORCE_LINEAR_ALLSTAR=1
 
 function generate_home () {
   ./bin/substitute home/*.IN
-  rsync -au "${www_exclude[@]}" home/. ./www
-  rsync -au "${gemini_exclude[@]}" home/. ./gemini/$THISHOST
+  rsync -au "${www_exclude[@]}" home/ ./www
+  rsync -au "${gemini_exclude[@]}" home/ ./gemini/$THISHOST
 }
 
 function generate_daily () {
