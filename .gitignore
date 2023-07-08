@@ -7,6 +7,7 @@ docker-compose.override.yml
 
 home/index.gmi
 home/index.html
+home/security.txt
 daily/*
 !daily/index.gmi.tmpl
 !daily/index.html.tmpl
