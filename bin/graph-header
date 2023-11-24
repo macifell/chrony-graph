@@ -6,8 +6,9 @@ LINSCALELIMIT=$3
 FORMAT=$4
 TITLE=$5
 CUSTOM=$6
+LINEAR=$7
 
-if [ -n "$FORCE_LINEAR" ]; then
+if [ -n "$FORCE_LINEAR" ] || [ "$LINEAR" = "LINEAR" ]; then
   YTICS=""
   YSCALE=""
 else

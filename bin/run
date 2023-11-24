@@ -45,11 +45,6 @@ echo statistics.log `date`
 # split the statistics logs based on the source IP
 cat_logfiles statistics.log\* | ../bin/timestamps | limit_time | sort -n | ../bin/split statistics ../aliases
 
-rm -f measurements.*
-echo measurements.log `date`
-# measurements logs - also split based on source IP
-cat_logfiles measurements.log\* | ../bin/timestamps | limit_time | sort -n | ../bin/split measurements ../aliases
-
 echo tracking.log `date`
 # local clock info goes in one logfile
 cat_logfiles tracking.log\* | ../bin/timestamps | limit_time | sort -n >tracking.log
