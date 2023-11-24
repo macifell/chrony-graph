@@ -40,14 +40,38 @@ function cat_logfiles {
 # find $LOGDIR -name "$file_pattern".gz -mtime -$LOGDAYS | xargs -r zcat
 }
 
-rm -f statistics*
-echo statistics.log `date`
-# split the statistics logs based on the source IP
-cat_logfiles statistics.log\* | ../bin/timestamps | limit_time | sort -n | ../bin/split statistics ../aliases
+function parse_stratum1_logfiles {
+  echo statistics.log `date`
 
-echo tracking.log `date`
-# local clock info goes in one logfile
-cat_logfiles tracking.log\* | ../bin/timestamps | limit_time | sort -n >tracking.log
+  # split the statistics logs based on the source IP
+  cat_logfiles statistics.log\* | awk '$3 != "NMEA"' | ../bin/timestamps | limit_time | sort -n | ../bin/split statistics ../aliases
+  awk 'NR % 40 == 0' statistics.PPS > statistics.sparse.PPS
+  mv statistics.sparse.PPS statistics.PPS
+
+  echo tracking.log `date`
+
+  # local clock info goes in one logfile
+  cat_logfiles tracking.log\* | awk 'NR % 10 == 0' | ../bin/timestamps | limit_time | sort -n >tracking.log
+}
+
+function parse_logfiles {
+  echo statistics.log `date`
+
+  # split the statistics logs based on the source IP
+  cat_logfiles statistics.log\* | ../bin/timestamps | limit_time | sort -n | ../bin/split statistics ../aliases
+
+  echo tracking.log `date`
+  # local clock info goes in one logfile
+  cat_logfiles tracking.log\* | ../bin/timestamps | limit_time | sort -n >tracking.log
+}
+
+rm -f statistics*
+
+if [ -n "$STRATUM_ONE" ]; then
+  parse_stratum1_logfiles
+else
+  parse_logfiles
+fi
 
 echo done `date`
 
