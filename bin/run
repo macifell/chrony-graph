@@ -51,7 +51,7 @@ function parse_stratum1_logfiles {
   echo tracking.log `date`
 
   # local clock info goes in one logfile
-  cat_logfiles tracking.log\* | awk 'NR % 10 == 0' | ../bin/timestamps | limit_time | sort -n >tracking.log
+  cat_logfiles tracking.log\* | awk '/^[0-9]/' | awk 'NR % 10 == 0' | ../bin/timestamps | limit_time | sort -n >tracking.log
 }
 
 function parse_logfiles {

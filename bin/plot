@@ -19,7 +19,6 @@ do
   gnuplot <<EOF
   load '../gnuplot/colors.pal'
   set terminal $TERMINAL size 900,600 font "Helvetica,14"
-  set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb"#FFFFFF" fs noborder behind
   set xdata time
   set timefmt "%s"
   set output "percentiles.$TERMINAL"
