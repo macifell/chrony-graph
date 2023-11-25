@@ -10,7 +10,8 @@ YTICS=`../bin/linlogytics $LINSCALELIMIT`
 TERMINAL=$1
 
 gnuplot <<EOF
-set terminal $TERMINAL size 900,600
+load "../gnuplot/colors.pal"
+set terminal $TERMINAL size 900,600 font "Helvetica,14"
 set xdata time
 set timefmt "%s"
 set output "local-clock.$TERMINAL"
@@ -25,8 +26,8 @@ set nonlinear y via f(y) inverse g(y)
 set xtic rotate by -45 scale 0
 set ytics format "%1.2f µs" nomirror ($YTICS)
 set y2tics format "%2.3f ppm" nomirror
-set title "Local Clock" font "Arial,24"
-set key bottom right box
+set title "Local Clock" font "Helvetica,24"
+set key bottom right box lc "#000000" opaque width -3
 set lmargin 12
 set rmargin 12
 plot \
@@ -41,7 +42,8 @@ ONE=`../bin/percentile 8 1 tracking.log | ../bin/mul 1000000`
 NF_M_F=`echo $NINETYFIVE - $FIVE | bc`
 NN_M_O=`echo $NINETYNINE - $ONE | bc`
 gnuplot <<EOF
-set terminal $TERMINAL size 900,600
+load "../gnuplot/colors.pal"
+set terminal $TERMINAL size 900,600 font "Helvetica,14"
 set xdata time
 set timefmt "%s"
 set output "local-clock-stddev.$TERMINAL"
@@ -51,8 +53,8 @@ set format x "%d-%H:%M"
 set logscale y
 set xtic rotate by -45 scale 0
 set ytics format "%1.2f µs" nomirror
-set title "Local Clock Standard Deviation" font "Arial,24"
-set key top right box
+set title "Local Clock Standard Deviation" font "Helvetica,24"
+set key top right box lc "#000000" opaque width -3
 set label 1 gprintf("99%% = $NINETYNINE µs",99) at graph 0.01,0.95 left front
 set label 2 gprintf("95%% = $NINETYFIVE µs",95) at graph 0.01,0.9 left front
 set label 3 gprintf(" 5%% = $FIVE µs",5) at graph 0.01,0.85 left front
@@ -76,7 +78,8 @@ ONE=`../bin/percentile 4 1 tracking.log`
 NF_M_F=`echo $NINETYFIVE - $FIVE | bc`
 NN_M_O=`echo $NINETYNINE - $ONE | bc`
 gnuplot <<EOF
-set terminal $TERMINAL size 900,600
+load "../gnuplot/colors.pal"
+set terminal $TERMINAL size 900,600 font "Helvetica,14"
 set xdata time
 set timefmt "%s"
 set output "local-clock-skew.$TERMINAL"
@@ -85,8 +88,8 @@ set xlabel "Time"
 set format x "%d-%H:%M"
 set xtic rotate by -45 scale 0
 set ytics format "%1.3f ppm" nomirror
-set title "Local Clock Skew" font "Arial,24"
-set key top right box
+set title "Local Clock Skew" font "Helvetica,24"
+set key top right box lc "#000000" opaque width -3
 set label 1 gprintf("99%% = $NINETYNINE ppm",99) at graph 0.01,0.95 left front
 set label 2 gprintf("95%% = $NINETYFIVE ppm",95) at graph 0.01,0.9 left front
 set label 3 gprintf(" 5%% = $FIVE ppm",5) at graph 0.01,0.85 left front

@@ -7,6 +7,7 @@ FORMAT=$4
 TITLE=$5
 CUSTOM=$6
 LINEAR=$7
+OPAQUE=$8
 
 if [ -n "$FORCE_LINEAR" ] || [ "$LINEAR" = "LINEAR" ]; then
   YTICS=""
@@ -26,7 +27,7 @@ fi
 #echo $YTICS 1>&2
 
 cat <<EOF
-set terminal $TERMINAL size 900,600
+set terminal $TERMINAL size 900,600 font "Helvetica,14"
 set xdata time
 set timefmt "%s"
 set output "$BASENAME.$TERMINAL"
@@ -36,8 +37,8 @@ set format x "%d-%H:%M"
 set xtic rotate by -45 scale 0
 set ylabel ""
 set ytics format "$FORMAT" nomirror $YTICS
-set title "$TITLE" font "Arial,24"
-set key top right box
+set title "$TITLE" font "Helvetica,24"
+set key top right box lc "#000000" width -3 $OPAQUE
 $YSCALE
 $CUSTOM
 set lmargin 12

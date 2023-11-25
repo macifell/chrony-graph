@@ -12,6 +12,7 @@ LINSCALELIMIT=`echo $LINSCALELIMIT | ../bin/mul 1000000`
 
 TERMINAL=$1
 (
+echo "load '../gnuplot/colors.pal'"
 ../bin/graph-header all-diff-freq $TERMINAL $LINSCALELIMIT "%1.1f µs/s" "All Clocks (Frequency Differences)" "set yrange [-3:3]"
 ../bin/foreach-stat "'__FILE__' using 1:(\$6*1000000) title '__TITLE__' with line \\"
 echo 

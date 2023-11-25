@@ -1,0 +1,18 @@
+set linetype 1 lc rgb '#2166AC' lw 2
+set linetype 2 lc rgb '#D95F02' lw 2
+set linetype 3 lc rgb '#E7298A' lw 2
+set linetype 4 lc rgb '#E6AB02' lw 2
+set linetype 5 lc rgb '#66A61E' lw 2
+set linetype 6 lc rgb '#A6761D' lw 2
+set linetype 7 lc rgb '#666666' lw 2
+set linetype 8 lc rgb '#7570B3' lw 2
+
+set palette maxcolors 8
+set palette defined ( 0 '#2166AC',\
+                      1 '#D95F02',\
+                      2 '#E7298A',\
+                      3 '#E6AB02',\
+                      4 '#66A61E',\
+                      5 '#A6761D',\
+                      6 '#666666',\
+                      7 '#7570B3')
