@@ -29,12 +29,6 @@ do
   set ytics format "%1.3f ppm" nomirror
   set title "Local Clock Range" font "Helvetica,24"
   set key bottom right box lc "#000000" opaque width -3
-  set label 1 gprintf("99%% = $NINETYNINE ppm",99) at graph 0.01,0.3 left front
-  set label 2 gprintf("95%% = $NINETYFIVE ppm",95) at graph 0.01,0.25 left front
-  set label 3 gprintf(" 5%% = $FIVE ppm",5) at graph 0.01,0.2 left front
-  set label 4 gprintf(" 1%% = $ONE ppm",1) at graph 0.01,0.15 left front
-  set label 5 gprintf("95%% - 5%% = $NF_M_F ppm",90) at graph 0.01,0.1 left front
-  set label 6 gprintf("99%% - 1%% = $NN_M_O ppm",98) at graph 0.01,0.05 left front
   set lmargin 12
   set rmargin 12
   plot \
@@ -71,12 +65,6 @@ EOF
   set ytics format "%1.2f µs" nomirror ($YTICS)
   set title "Local Clock Offsets Over Time" font "Helvetica,24"
   set key bottom right box lc "#000000" opaque width -3
-  set label 1 gprintf("99%% = %1.2f µs",$NINETYNINE) at graph 0.01,0.3 left front
-  set label 2 gprintf("95%% = %1.2f µs",$NINETYFIVE) at graph 0.01,0.25 left front
-  set label 3 gprintf(" 5%% = %1.2f µs",$FIVE) at graph 0.01,0.2 left front
-  set label 4 gprintf(" 1%% = %1.2f µs",$ONE) at graph 0.01,0.15 left front
-  set label 5 gprintf("95%% - 5%% = %1.2f µs", $NF_M_F) at graph 0.01,0.1 left front
-  set label 6 gprintf("99%% - 1%% = %1.2f µs", $NN_M_O) at graph 0.01,0.05 left front
   set lmargin 12
   set rmargin 12
   plot \
