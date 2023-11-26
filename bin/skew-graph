@@ -3,7 +3,7 @@ TERMINAL=$1
 
 LINSCALELIMIT=1
 for stat in statistics.*; do
-    LINSCALELIMIT=`../bin/linscalelimit $LINSCALELIMIT 5 30 $stat`
+    LINSCALELIMIT=`../bin/linscalelimit $LINSCALELIMIT 5 80 $stat`
     echo $stat $LINSCALELIMIT
 done
 LINSCALELIMIT=`echo $LINSCALELIMIT | ../bin/mul 1000000`
