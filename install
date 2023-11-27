@@ -2,7 +2,6 @@
 
 import os
 import shutil
-import sys
 
 from string import Template
 from subprocess import check_call

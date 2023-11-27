@@ -1,105 +1,7 @@
-###
-### Europe
-###
-
-# CH NTS
-statistics.109.202.196.249 ntp.trifence.ch/IPv4
-statistics.2a02:168:2000:1f::a13 ntp.trifence.ch/IPv6.s
-statistics.2a02:168:2000:1f:6eb3:11ff:fe20:df86 ntp.trifence.ch/IPv6.l
-
-statistics.85.195.224.28 ntp.zeitgitter.net/IPv4
-statistics.2a02:168:fa16:1::80 ntp.zeitgitter.net/IPv6
-
-statistics.81.6.46.231 gpstime.trifence.ch/IPv4
-statistics.185.137.172.120 tricorder.trifence.ch/IPv4
-statistics.185.137.172.42 tricorder.trifence.ch/IPv4/old1
-statistics.185.137.172.71 tricorder.trifence.ch/IPv4/old2
-statistics.185.137.172.111 tricorder.trifence.ch/IPv4/old3
-statistics.2a02:168:2000:58::20 tricorder.trifence.ch/IPv6
-
-statistics.62.12.167.109 ntp.3eck.net/IPv4
-statistics.2001:8a8:4008::109 ntp.3eck.net/IPv6
-
-statistics.89.217.129.163 time.signorini.ch/IPv4
-
-statistics.62.12.141.196 ntp.bopp.ch
-
-# CH
-statistics.192.33.96.102 time2.ethz.ch/IPv4
-
-statistics.82.197.188.130 ntp1.init7.net/IPv4
-statistics.2001:1620:2777:b::128 ntp1.init7.net/IPv6
-statistics.82.197.164.46 ntp2.init7.net/IPv4
-statistics.2001:1620:2777:d::2 ntp2.init7.net/IPv6
-
-statistics.195.176.26.204 ntp11.metas.ch/IPv4
-statistics.195.176.26.205 ntp12.metas.ch/IPv4
-statistics.195.176.26.206 ntp13.metas.ch/IPv4
-
-statistics.84.16.73.33 tick.ntp.infomaniak.ch/IPv4
-statistics.2001:1600:4:1::123 tick.ntp.infomaniak.ch/IPv6
-statistics.84.16.67.12 tock.ntp.infomaniak.ch/IPv4
-statistics.2001:1600:3:6::123 tock.ntp.infomaniak.ch/IPv6
-statistics.185.125.24.59 falseticker.ntp.infomaniak.ch/IPv4
-
-# DE NTS
-statistics.192.53.103.108 ptbtime1.ptb.de/IPv4
-statistics.2001:638:610:be01::108 ptbtime1.ptb.de/IPv6
-statistics.192.53.103.104 ptbtime2.ptb.de/IPv4
-statistics.2001:638:610:be01::104 ptbtime2.ptb.de/IPv6
-statistics.192.53.103.103 ptbtime3.ptb.de/IPv4
-statistics.2001:638:610:be01::103 ptbtime3.ptb.de/IPv6
-statistics.178.63.52.247 nts1.adopo.net/IPv4
-statistics.94.16.114.254 www.jabber-germany.de/IPv4
-statistics.2a03:4000:28:365::1 www.jabber-germany.de/IPv6
-statistics.185.244.195.159 www.masters-of-cloud.de/IPv4
-statistics.2a03:4000:27:602:d4cf:50ff:fedb:b65a www.masters-of-cloud.de/IPv6
-statistics.131.188.3.223 ntp3.fau.de
-statistics.2001:638:a000:1123:123::4 ntp3.ipv6.fau.de
-
-# DE
-statistics.134.34.3.18 time1.uni-konstanz.de/IPv4
-statistics.2001:7c0:2800::3:18 time1.uni-konstanz.de/IPv4
-statistics.134.34.3.19 time2.uni-konstanz.de/IPv4
-statistics.2001:7c0:2800::3:19 time2.uni-konstanz.de/IPv4
-
-# FR NTS
 statistics.15.237.97.214 paris.time.system76.com
 statistics.2a05:d012:3ca:8100:983c:cae0:5e49:4d81 paris.time.system76.com/IPv6
-
-# NL NTS
-statistics.94.198.159.11 nts.time.nl/IPv4
-statistics.94.198.159.15 ntppool1.time.nl/IPv4
-statistics.94.198.159.16 ntppool2.time.nl/IPv4
-statistics.2a00:d78:0:712:94:198:159:11 nts.time.nl/IPv6
-statistics.2a00:d78:0:712:94:198:159:15 ntppool1.time.nl/IPv6
-statistics.2a00:d78:0:712:94:198:159:16 ntppool2.time.nl/IPv6
-
-# SE NTS
-statistics.194.58.202.201 nts.ntp.se/IPv4
-statistics.2a01:3f7:2:202::201 nts.ntp.se/IPv6
-statistics.194.58.202.202 ntsts.sth.ntp.se/IPv4
-statistics.2a01:3f7:2:202::202 ntsts.sth.ntp.se/IPv6
-statistics.2a01:3f7:2:44::8 sth1-ts.nts.netnod.se/IPv6
-statistics.194.58.207.80 sth2-ts.nts.netnod.se/IPv4
-
-###
-### Americas
-###
-
-# BR NTS
-statistics.200.160.7.186 a.st1.ntp.br/IPv4
-statistics.2001:12ff:0:7::186 a.st1.ntp.br/IPv6
-statistics.201.49.148.135 b.st1.ntp.br/IPv4
-statistics.200.186.125.195 c.st1.ntp.br/IPv4
-statistics.200.20.186.76 d.st1.ntp.br/IPv4
-statistics.200.160.7.197 gps.ntp.br/IPv4
-statistics.2001:12ff:0:7::197 gps.ntp.br/IPv6
-
 statistics.18.228.202.30 brazil.time.system76.com
 statistics.2600:1f1e:e88:8e00:b643:8f42:7320:9c3a brazil.time.system76.com/IPv6
-
-# US NTS
 statistics.3.134.129.152 ohio.time.system76.com
 statistics.2600:1f16:42a:1d00:2169:fe07:2acc:6002 ohio.time.system76.com/IPv6
 statistics.52.10.183.132 oregon.time.system76.com
@@ -110,25 +12,10 @@ statistics.50.116.42.84 time.cifelli.xyz
 statistics.2600:3c02::f03c:93ff:fecf:972e time.cifelli.xyz/IPv6
 statistics.143.42.132.139 stratum1.time.cifelli.xyz
 statistics.2600:3c02:e000:7e7:ff:47:d984:6a5b stratum1.time.cifelli.xyz/IPv6
-
-# US NIST (authenticated)
 statistics.132.163.96.5 ntp-b.nist.gov/SK
 statistics.132.163.97.5 ntp-wwv.nist.gov/SK
 statistics.128.138.141.177 ntp-c.colorado.edu/SK
 statistics.129.6.15.32 ntp-g.nist.gov/SK
-
-###
-### Asia
-###
-
-# SG NTS
-statistics.203.123.48.219 ntpmon.dcs1.biz/IPv4
-statistics.2405:fc00:0:1::123 ntpmon.dcs1.biz/IPv6
-
-###
-### Global
-###
-
 statistics.162.159.200.1 time.cloudflare.com/IPv4.1
 statistics.162.159.200.123 time.cloudflare.com/IPv4.123
 statistics.2606:4700:f1::1 time.cloudflare.com/IPv6.1

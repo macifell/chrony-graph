@@ -50,3 +50,8 @@ This log file can be rotated by creating `/etc/logrotate.d/chrony-graph` contain
 }
 
 ```
+
+## Dependencies
+```
+sudo apt install perl libhttp-date-perl
+```
