@@ -8,14 +8,17 @@ statistics.52.10.183.132 oregon.time.system76.com
 statistics.2600:1f13:eda:9800:bcd8:839c:9b40:25b2 oregon.time.system76.com/IPv6
 statistics.3.220.42.39 virginia.time.system76.com
 statistics.2600:1f18:4c51:e200:e142:210a:306d:4872 virginia.time.system76.com/IPv6
+
 statistics.50.116.42.84 time.cifelli.xyz
 statistics.2600:3c02::f03c:93ff:fecf:972e time.cifelli.xyz/IPv6
 statistics.143.42.132.139 stratum1.time.cifelli.xyz
 statistics.2600:3c02:e000:7e7:ff:47:d984:6a5b stratum1.time.cifelli.xyz/IPv6
+
 statistics.132.163.96.5 ntp-b.nist.gov/SK
 statistics.132.163.97.5 ntp-wwv.nist.gov/SK
 statistics.128.138.141.177 ntp-c.colorado.edu/SK
 statistics.129.6.15.32 ntp-g.nist.gov/SK
+
 statistics.162.159.200.1 time.cloudflare.com/IPv4.1
 statistics.162.159.200.123 time.cloudflare.com/IPv4.123
 statistics.2606:4700:f1::1 time.cloudflare.com/IPv6.1
