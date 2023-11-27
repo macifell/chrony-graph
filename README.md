@@ -5,7 +5,7 @@ Create a website with useful information and graphs from chrony.
 ## Dependencies
 Debian
 ```
-sudo apt install bc python3 perl libdatetime-perl gnuplot-nox rsync fonts-liberation
+sudo apt install bc python3 perl libdatetime-perl libhttp-date-perl gnuplot-nox rsync fonts-liberation
 ```
 
 ## Installation
@@ -49,9 +49,4 @@ This log file can be rotated by creating `/etc/logrotate.d/chrony-graph` contain
         endscript
 }
 
-```
-
-## Dependencies
-```
-sudo apt install perl libhttp-date-perl
 ```
