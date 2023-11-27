@@ -3,8 +3,6 @@ TERMINAL=$1
 
 LINSCALELIMIT=`../bin/linscalelimit 1 5 30 tracking.log | ../bin/mul 1000000`
 
-# echo $LINSCALELIMIT
-
 YTICS=`../bin/linlogytics $LINSCALELIMIT`
 
 TERMINAL=$1

@@ -8,8 +8,6 @@ for stat in statistics.*; do
 done
 LINSCALELIMIT=`echo $LINSCALELIMIT | ../bin/mul 1000000`
 
-# echo $LINSCALELIMIT
-
 TERMINAL=$1
 (
 echo "load '../gnuplot/colors.pal'"

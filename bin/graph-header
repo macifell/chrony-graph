@@ -22,9 +22,6 @@ set nonlinear y via f(y) inverse g(y)
 EOF
 fi
 
-#echo $LINSCALELIMIT 1>&2
-#echo $YTICS 1>&2
-
 cat <<EOF
 set terminal $TERMINAL size 900,600 font "Helvetica,14"
 set xdata time
