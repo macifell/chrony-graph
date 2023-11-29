@@ -22,7 +22,7 @@ done | grep -v NMEA | sort -n | while read date file; do
     i=1
   fi
 
-  title=${title:0:4}..
+  title=${title:0:5}..
 
   echo $TEMPLATE | sed -e "s/__FILE__/$file/g" -e "s=__TITLE__=$title=g"
 done
