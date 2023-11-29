@@ -89,11 +89,11 @@ EOF
   set xtic rotate by -45 scale 0
   set title "Local Clock Offsets — Histogram" font "Helvetica,24"
   set xtics format "%1.1f µs" nomirror
-  set label 1 gprintf("25%% = %1.2f µs",$TWENTYFIVE) at $TWENTYFIVE, graph 0.7 right front offset -1,-1
-  set style arrow 1 nohead
+  set label 1 gprintf("P_{25} = %1.2f µs",$TWENTYFIVE) at $TWENTYFIVE, graph 0.7 right front offset -1,-1
+  set style arrow 1 nohead lt 3
   set arrow from $TWENTYFIVE,0 to $TWENTYFIVE,graph 0.7 as 1
-  set label 2 gprintf("75%% = %1.2f µs",$SEVENTYFIVE) at $SEVENTYFIVE, graph 0.7 left front offset 1,-1
-  set style arrow 2 nohead
+  set label 2 gprintf("P_{75} = %1.2f µs",$SEVENTYFIVE) at $SEVENTYFIVE, graph 0.7 left front offset 1,-1
+  set style arrow 2 nohead lt 4
   set arrow from $SEVENTYFIVE,0 to $SEVENTYFIVE,graph 0.7 as 2
   set xrange [-500:500]
   set key off
