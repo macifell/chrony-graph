@@ -8,10 +8,9 @@ for stat in statistics.*; do
 done
 LINSCALELIMIT=`echo $LINSCALELIMIT | ../bin/mul 1000000`
 
-TERMINAL=$1
 (
 echo "load '../gnuplot/colors.pal'"
-../bin/graph-header all-diff-freq $TERMINAL $LINSCALELIMIT "%1.1f ppm" "All Clocks (Frequency Differences)" "set key off"
+../bin/graph-header all-diff-freq $TERMINAL $LINSCALELIMIT "%1.1f ppm" "All Clocks (Frequency Differences)" "set key top center horizontal box lc '#000000' opaque samplen 1 width -1"
 ../bin/foreach-stat "'__FILE__' using 1:(\$6*1000000) title '__TITLE__' with line \\"
 echo 
 ) | gnuplot

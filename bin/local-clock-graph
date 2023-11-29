@@ -25,12 +25,12 @@ set xtic rotate by -45 scale 0
 set ytics format "%1.2f µs" nomirror ($YTICS)
 set y2tics format "%2.3f ppm" nomirror
 set title "Local Clock" font "Helvetica,24"
-set key bottom right box lc "#000000" opaque width -3
+set key bottom right box lc "#000000" opaque samplen 1 width -2
 set lmargin 12
 set rmargin 12
 plot \
  "tracking.log" using 1:(\$6*1000000) title "offset" with linespoints, \
- "tracking.log" using 1:4 title "local clock error" with linespoints axis x1y2
+ "tracking.log" using 1:4 title "clock error" with linespoints axis x1y2
 EOF
 
 NINETYFIVE=`../bin/percentile 8 95 tracking.log | ../bin/mul 1000000`
@@ -52,7 +52,7 @@ set logscale y
 set xtic rotate by -45 scale 0
 set ytics format "%1.2f µs" nomirror
 set title "Local Clock Standard Deviation" font "Helvetica,24"
-set key bottom right box lc "#000000" opaque width -3
+set key bottom right box lc "#000000" opaque samplen 1 width -3
 set lmargin 12
 set rmargin 12
 plot \
@@ -81,7 +81,7 @@ set format x "%d-%H:%M"
 set xtic rotate by -45 scale 0
 set ytics format "%1.3f ppm" nomirror
 set title "Local Clock Skew" font "Helvetica,24"
-set key top right box lc "#000000" opaque width -3
+set key top right box lc "#000000" opaque samplen 1 width -3
 set lmargin 12
 set rmargin 12
 plot \

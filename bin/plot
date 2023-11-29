@@ -28,11 +28,11 @@ do
   set xtic rotate by -45 scale 0
   set ytics format "%1.3f ppm" nomirror
   set title "Local Clock Range" font "Helvetica,24"
-  set key bottom right box lc "#000000" opaque width -3
+  set key bottom right box lc "#000000" opaque samplen 1 width -3
   set lmargin 12
   set rmargin 12
   plot \
-  "tracking.log" using 1:4 title "local clock error" with linespoints, \
+  "tracking.log" using 1:4 title "clock error" with linespoints, \
   $NINETYNINE title "99th percentile", \
   $NINETYFIVE title "95th percentile", \
   $FIVE title "5th percentile", \
@@ -64,11 +64,11 @@ EOF
   set xtic rotate by -45 scale 0
   set ytics format "%1.2f µs" nomirror ($YTICS)
   set title "Local Clock Offsets Over Time" font "Helvetica,24"
-  set key bottom right box lc "#000000" opaque width -3
+  set key bottom right box lc "#000000" opaque samplen 1 width -3
   set lmargin 12
   set rmargin 12
   plot \
-  "tracking.log" using 1:(\$6 * 1000000) title "local clock offset" with linespoints, \
+  "tracking.log" using 1:(\$6 * 1000000) title "offset" with linespoints, \
   $NINETYNINE title "99th percentile", \
   $NINETYFIVE title "95th percentile", \
   $FIVE title "5th percentile", \

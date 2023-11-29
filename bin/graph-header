@@ -34,7 +34,7 @@ set xtic rotate by -45 scale 0
 set ylabel ""
 set ytics format "$FORMAT" nomirror $YTICS
 set title "$TITLE" font "Helvetica,24"
-set key bottom right box lc "#000000" width -3 opaque
+set key bottom right box lc "#000000" width -3 opaque samplen 1
 $YSCALE
 $CUSTOM
 set lmargin 12
