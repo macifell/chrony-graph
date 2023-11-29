@@ -52,7 +52,7 @@ set logscale y
 set xtic rotate by -45 scale 0
 set ytics format "%1.2f µs" nomirror
 set title "Local Clock Standard Deviation" font "Helvetica,24"
-set key top right box lc "#000000" opaque width -3
+set key bottom right box lc "#000000" opaque width -3
 set lmargin 12
 set rmargin 12
 plot \
