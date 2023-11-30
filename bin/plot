@@ -8,7 +8,6 @@ do
   ../bin/local-clock-graph $TERMINAL
   ../bin/offset-graph $TERMINAL
   ../bin/diff-freq-graph $TERMINAL
-  ../bin/skew-graph $TERMINAL
 
   NINETYFIVE=`../bin/percentile 3 95 tracking.log`
   NINETYNINE=`../bin/percentile 3 99 tracking.log`
