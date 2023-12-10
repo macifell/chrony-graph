@@ -24,6 +24,10 @@
     This server provides both unauthenticated (NTP) and authenticated (NTS) time services.
     You are encouraged to use NTS where possible.
   </p>
+  <p>
+    __CUSTOM_DESCRIPTION__
+  </p>
+  <br />
 
   <p>
     <b>Stratum -</b> __STRATUM__

@@ -12,5 +12,6 @@ do
       -e "s/__REFERENCE__/${reference:-none}/" \
       -e "s/__LOCATION__/${LOCATION:-Earth}/" \
       -e "s/__CONTACT__/${CONTACT:-none}/" \
+      -e "s/__CUSTOM_DESCRIPTION__/${CUSTOM_DESCRIPTION}/" \
     < "$i" > "${i/.IN/}"
 done

@@ -2,6 +2,8 @@
 
 This server provides both unauthenticated (NTP) and authenticated (NTS) time services. You are encouraged to use NTS where possible.
 
+__CUSTOM_DESCRIPTION__
+
 Stratum: __STRATUM__
 Reference: __REFERENCE__
 Location: __LOCATION__
