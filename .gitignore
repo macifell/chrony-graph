@@ -5,6 +5,7 @@ run[0-9]*
 .env
 docker-compose.override.yml
 
+home/health.json
 home/index.gmi
 home/index.html
 home/security.txt
