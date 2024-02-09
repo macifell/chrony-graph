@@ -24,6 +24,16 @@ function generate_weekly () {
   rsync -au "${gemini_exclude[@]}" weekly ./gemini/$THISHOST
 }
 
+function home_loop() {
+  duration=0
+
+  while [ $duration -lt $INTERVAL ]; do
+    generate_home
+    sleep 60
+    duration=$((duration + 60))
+  done
+}
+
 mkdir -p ./gemini/$THISHOST
 
 generate_home
@@ -31,11 +41,10 @@ generate_daily
 
 while true; do
   generate_weekly
-  sleep $INTERVAL
+  home_loop
 
   for i in {1..7}; do
-    generate_home
     generate_daily
-    sleep $INTERVAL
+    home_loop
   done
 done

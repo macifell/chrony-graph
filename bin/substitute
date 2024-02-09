@@ -2,6 +2,7 @@
 
 stratum=$(chronyc tracking | grep 'Stratum' | cut -d ':' -f2 | xargs);
 reference=$(chronyc tracking | grep 'Reference ID' | cut -d '(' -f2 | cut -d ')' -f1);
+timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ");
 
 # Replace template strings such as THISHOST, for host independence
 for i in "$@"
@@ -13,5 +14,6 @@ do
       -e "s/__LOCATION__/${LOCATION:-Earth}/" \
       -e "s/__CONTACT__/${CONTACT:-none}/" \
       -e "s/__CUSTOM_DESCRIPTION__/${CUSTOM_DESCRIPTION}/" \
+      -e "s/__TIMESTAMP__/${timestamp}/" \
     < "$i" > "${i/.IN/}"
 done
