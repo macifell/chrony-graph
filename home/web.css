@@ -54,7 +54,7 @@ code {
   letter-spacing: normal;
 }
 
-img {
+img:not(.badge) {
   width: 50%;
   border: 8px solid #FFFFFF;
   box-sizing: border-box;
@@ -125,7 +125,7 @@ body ul.header li a:hover {
 }
 
 @media (max-width: 30rem) {
-  img {
+  img:not(.badge) {
     width: 100%;
   }
 }
