@@ -124,6 +124,10 @@ body ul.header li a:hover {
   background-color: #d09a27;
 }
 
+.hidden {
+  display: none;
+}
+
 @media (max-width: 30rem) {
   img:not(.badge) {
     width: 100%;

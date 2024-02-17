@@ -53,6 +53,20 @@
     The <code>nts</code> flag at the end of the line indicates that the time from this server will only be used if it is
     properly authenticated.
   </p>
+
+  <div class="__BADGE_CLASS__">
+    <br />
+    <hr />
+
+    <p>
+      <a href="__STATUS_LINK__" target="_blank">
+        <img class="badge" src="__STATUS_BADGE__" />
+      </a>
+      <a href="__UPTIME_LINK__" target="_blank">
+        <img class="badge" src="__UPTIME_BADGE__" />
+      </a>
+    </p>
+  </div>
 </body>
 
 </html>

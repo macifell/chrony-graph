@@ -4,6 +4,8 @@ stratum=$(chronyc tracking | grep 'Stratum' | cut -d ':' -f2 | xargs);
 reference=$(chronyc tracking | grep 'Reference ID' | cut -d '(' -f2 | cut -d ')' -f1);
 timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ");
 
+[[ -z $STATUS_LINK ]] && badgeClass="hidden" || badgeClass=""
+
 # Replace template strings such as THISHOST, for host independence
 for i in "$@"
 do
@@ -15,5 +17,10 @@ do
       -e "s/__CONTACT__/${CONTACT:-none}/" \
       -e "s/__CUSTOM_DESCRIPTION__/${CUSTOM_DESCRIPTION}/" \
       -e "s/__TIMESTAMP__/${timestamp}/" \
+      -e "s/__BADGE_CLASS__/${badgeClass}/" \
+      -e "s|__STATUS_LINK__|${STATUS_LINK}|" \
+      -e "s|__STATUS_BADGE__|${STATUS_BADGE}|" \
+      -e "s|__UPTIME_LINK__|${UPTIME_LINK}|" \
+      -e "s|__UPTIME_BADGE__|${UPTIME_BADGE}|" \
     < "$i" > "${i/.IN/}"
 done
