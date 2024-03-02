@@ -60,6 +60,10 @@ img:not(.badge) {
   box-sizing: border-box;
 }
 
+badge-link {
+  display: inline-block;
+}
+
 /* Box */
 .box {
   margin-left: 0.5rem;

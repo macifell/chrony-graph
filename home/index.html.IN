@@ -59,12 +59,8 @@
     <hr />
 
     <p>
-      <a href="__STATUS_LINK__" target="_blank">
-        <img class="badge" src="__STATUS_BADGE__" />
-      </a>
-      <a href="__UPTIME_LINK__" target="_blank">
-        <img class="badge" src="__UPTIME_BADGE__" />
-      </a>
+      <a href="__STATUS_LINK__" target="_blank" class="badge-link"><img class="badge" src="__STATUS_BADGE__" alt="" /></a>
+      <a href="__UPTIME_LINK__" target="_blank" class="badge-link"><img class="badge" src="__UPTIME_BADGE__" alt="" /></a>
     </p>
   </div>
 </body>
