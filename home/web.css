@@ -54,10 +54,25 @@ code {
   letter-spacing: normal;
 }
 
-img:not(.badge) {
+.graphs img {
   width: 50%;
   border: 8px solid #FFFFFF;
   box-sizing: border-box;
+}
+
+.graphs a:nth-child(odd) img {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.graphs a:nth-child(even) img {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.graphs a:last-child img {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 badge-link {
@@ -92,6 +107,8 @@ ul.header {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 ul.header li {
@@ -132,8 +149,14 @@ body ul.header li a:hover {
   display: none;
 }
 
-@media (max-width: 30rem) {
-  img:not(.badge) {
+@media screen and (max-width: 1080px) {
+  .graphs a:nth-child(n) img {
     width: 100%;
+    border-radius: 0;
+  }
+
+  ul.header {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 }
