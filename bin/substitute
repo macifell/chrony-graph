@@ -3,6 +3,7 @@
 stratum=$(chronyc tracking | grep 'Stratum' | cut -d ':' -f2 | xargs);
 reference=$(chronyc tracking | grep 'Reference ID' | cut -d '(' -f2 | cut -d ')' -f1);
 timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ");
+oneYearFromNow=$(date -u +"%Y-%m-%dT%H:%M:%SZ" -d "+1 year");
 
 [[ -z $STATUS_LINK ]] && badgeClass="hidden" || badgeClass=""
 
@@ -22,5 +23,6 @@ do
       -e "s|__STATUS_BADGE__|${STATUS_BADGE}|" \
       -e "s|__UPTIME_LINK__|${UPTIME_LINK}|" \
       -e "s|__UPTIME_BADGE__|${UPTIME_BADGE}|" \
+      -e "s|__SECURITY_TXT_EXPIRATION__|${oneYearFromNow}|" \
     < "$i" > "${i/.IN/}"
 done
