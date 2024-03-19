@@ -17,7 +17,7 @@ do
   NN_M_O=`echo $NINETYNINE - $ONE | bc`
   gnuplot <<EOF
   load '../gnuplot/colors.pal'
-  set terminal $TERMINAL size 900,600 font "Helvetica,14"
+  set terminal $TERMINAL size 900,600 font "Arial,14"
   set xdata time
   set timefmt "%s"
   set output "percentiles.$TERMINAL"
@@ -26,7 +26,7 @@ do
   set format x "%d-%H:%M"
   set xtic rotate by -45 scale 0
   set ytics format "%1.3f ppm" nomirror
-  set title "Local Clock Frequency" font "Helvetica,24"
+  set title "Local Clock Frequency" font "Arial,24"
   set key bottom right box lc "#000000" opaque samplen 1 width -3
   set lmargin 12
   set rmargin 12
@@ -48,7 +48,7 @@ EOF
   YTICS=`../bin/linlogytics $LINSCALELIMIT`
   gnuplot <<EOF
   load '../gnuplot/colors.pal'
-  set terminal $TERMINAL size 900,600 font "Helvetica,14"
+  set terminal $TERMINAL size 900,600 font "Arial,14"
   set xdata time
   set timefmt "%s"
   set output "percentiles-offset.$TERMINAL"
@@ -62,7 +62,7 @@ EOF
   set nonlinear y via f(y) inverse g(y)
   set xtic rotate by -45 scale 0
   set ytics format "%1.2f µs" nomirror ($YTICS)
-  set title "Local Clock Offset" font "Helvetica,24"
+  set title "Local Clock Offset" font "Arial,24"
   set key bottom right box lc "#000000" opaque samplen 1 width -3
   set lmargin 12
   set rmargin 12
@@ -82,11 +82,11 @@ EOF
 
   gnuplot <<EOF
   load '../gnuplot/colors.pal'
-  set terminal $TERMINAL size 900,600 font "Helvetica,14"
+  set terminal $TERMINAL size 900,600 font "Arial,14"
   set output "offset-histogram.$TERMINAL"
   set grid
   set xtic rotate by -45 scale 0
-  set title "Local Clock Offset — Histogram" font "Helvetica,24"
+  set title "Local Clock Offset — Histogram" font "Arial,24"
   set xtics format "%1.1f µs" nomirror
   set label 1 gprintf("P_{25} = %1.2f µs",$TWENTYFIVE) at $TWENTYFIVE, graph 0.7 right front offset -1,-1
   set style arrow 1 nohead lt 3

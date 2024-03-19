@@ -23,7 +23,7 @@ EOF
 fi
 
 cat <<EOF
-set terminal $TERMINAL size 900,600 font "Helvetica,14"
+set terminal $TERMINAL size 900,600 font "Arial,14"
 set xdata time
 set timefmt "%s"
 set output "$BASENAME.$TERMINAL"
@@ -33,7 +33,7 @@ set format x "%d-%H:%M"
 set xtic rotate by -45 scale 0
 set ylabel ""
 set ytics format "$FORMAT" nomirror $YTICS
-set title "$TITLE" font "Helvetica,24"
+set title "$TITLE" font "Arial,24"
 set key bottom right box lc "#000000" width -3 opaque samplen 1
 $YSCALE
 $CUSTOM
