@@ -1,3 +1,5 @@
 # who should be contacted about security problems?
 Contact: mailto:__CONTACT__
+
+# when is this file considered stale?
 Expires: __SECURITY_TXT_EXPIRATION__
