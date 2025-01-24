@@ -35,7 +35,7 @@ function limit_time {
 function cat_logfiles {
   file_pattern="$1"
 
-  find $LOGDIR -name "$file_pattern" \! -name \*.gz -mtime -$LOGDAYS | sort -rn | xargs -r grep -h "^[0-9]"
+  find $LOGDIR -name "$file_pattern" \! -name \*.gz -mtime -$LOGDAYS | sort -rn | xargs -r grep -a -h "^[0-9]"
 # un-comment this next line if you compress your logs
 # find $LOGDIR -name "$file_pattern".gz -mtime -$LOGDAYS | xargs -r zcat
 }
